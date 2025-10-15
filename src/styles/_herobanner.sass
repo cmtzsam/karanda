@@ -1,0 +1,227 @@
+.heroBanner
+  position: relative
+  background-position: center
+  background-size: cover
+  background-repeat: no-repeat 
+  margin-bottom: 40px
+
+  &--inf
+    display: flex
+    align-items: center
+    min-height: 100vh
+    max-height: 875px
+    h1
+      text-align: center
+      font-size: 150px
+      white-space: nowrap
+      color: white
+
+
+
+
+h2
+  color: var(--azul)
+  span
+    color: var(--naranja)
+
+.welcomeBlock
+  padding: 50px 0
+
+
+  &--copy
+    width: 100%
+    margin: 0 auto
+    text-align: right
+    &-large
+      text-align: center
+      width: 100%
+      max-width: 760px
+      margin: 0 auto
+      p
+        margin: 20px auto 0
+        max-width: 100%
+    p
+      max-width: 520px
+      margin-left: auto
+      font-weight: 500
+      margin-top: 20px
+      i
+        color: var(--naranja)
+        font-size: 30px
+
+
+.instalacionesBlock
+  padding: 50px 0 100px
+  h2
+    padding-bottom: 30px
+  p
+    font-size: 22px
+    color: var(--naranja)
+    font-weight: 500
+    margin: 20px 0 0
+
+
+.conoceBlock
+  background-color: var(--azul) 
+  padding: 80px 0 140px
+  h2, p
+    text-align: center
+  h2
+    color: var(--celeste)
+  p
+    color: var(--blanco)
+    font-size: 22px
+    padding: 10px 0 80px
+  &--card
+    &-foot
+      display: flex
+      align-items: center
+      padding: 10px 0
+      margin-top: 10px
+      p, a
+        font-size: 1rem
+      p
+        width: 50%
+        margin-right: auto
+        padding: 0
+      
+
+
+.ctaBigBlock
+  position: relative
+  display: flex
+  align-items: center
+  height: 800px
+  background-position: center
+  background-size: cover
+  &::before
+    content: ""
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background-color: var(--negro)
+    opacity: .25
+    z-index: 1
+  &--copy
+    width: 100%
+    max-width: 500px
+    margin-left: auto
+    position: relative
+    z-index: 99
+    h3, h2 span, p
+      color: var(--blanco)
+    h2
+      color: var(--gris)
+      position: relative
+      span
+        position: absolute
+        left: 0
+        bottom: 0
+        transform: translateY(33%)
+        line-height: 1
+        display: block
+    h3
+      font-size: 1rem
+    p
+      font-size: 22px
+      padding-left: 30px
+      padding-top: 40px
+
+
+.pageReviews
+  .reviewsBlock
+    background-color: var(--blanco)
+    &--img
+      position: relative
+      z-index: 1
+      margin-right: -40px
+    &--reviews
+      padding: 0
+      &-items
+        padding: 0
+        position: relative
+        z-index: 2
+
+.reviewsBlock
+  background-color: var(--celeste)
+  .container-fluid
+    padding: 0
+    margin: 0
+    display: flex
+
+  h2
+    margin-bottom: 80px
+    span
+      color: var(--blanco)
+
+  &--img,
+  &--reviews
+    width: 50%
+    img
+      width: 100%
+      display: block
+  &--img
+    img
+      width: 100%
+  &--reviews
+    padding: 80px 4% 0
+    &-items
+      padding: 0 50px
+    &-item
+      position: relative
+      &-who
+        width: 70px
+        height: 70px
+        display: flex
+        align-items: center
+        justify-content: center
+        text-align: center
+        background-color: var(--naranja)
+        color: var(--gris)
+        border-radius: 100%
+        line-height: 1
+        z-index: 2
+        position: absolute
+        left: -35px
+        top: -35px
+        i
+          font-size: 55px
+          display: block
+          line-height: 1
+          position: relative
+          top: 3px
+      &-copy
+        position: relative
+        z-index: 1
+        background-color: var(--azul)
+        border-radius: 20px
+        padding: 30px 35px
+        h3, h4, a
+          color: var(--gris)
+        h3, h4
+          font-size: 1rem
+        p
+          color: var(--celeste)
+          padding: 15px 0
+          margin: 0
+          font-size: 17px
+
+
+.imageBlock
+  &--btns
+    .btn-circle
+      width: 50px
+      height: 50px
+      &.btn-airbnb
+        background-color: var(--airbnbrosa)
+      &.btn-booking
+        background-color: var(--bookingazul)
+      i
+        color: var(--blanco)
+        font-size: 25px
+        position: relative
+        top: 3px
+
+

@@ -1,0 +1,28 @@
+@use 'variables' as *;
+@use 'fonts' as *;
+@use 'herobanner' as *;
+
+html, body{
+  background-color: var(--blanco);
+}
+
+h1{
+  font-family: 'Jadyn Maria', sans-serif;
+}
+h2{
+  font-family: 'Anglecia Pro Dsp', sans-serif;
+  font-size: 50px;
+  span{
+    font-family: 'Jadyn Maria', sans-serif;
+    font-size: 2em;
+  }
+}
+body{
+  font-family: 'Neutraface Text';
+  color: var(--negro)
+}
+p{
+  font-size: 18px;
+}
+
+

@@ -1,5 +1,7 @@
+@use 'mixins' as *;
 @use 'variables' as *;
 @use 'fonts' as *;
+@use 'header' as *;
 @use 'herobanner' as *;
 
 html, body{
@@ -14,7 +16,9 @@ h2{
   font-size: 50px;
   span{
     font-family: 'Jadyn Maria', sans-serif;
-    font-size: 2em;
+    @include minDesktop1280{
+      font-size: 2em;
+    }
   }
 }
 body{

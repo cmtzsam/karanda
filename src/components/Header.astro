@@ -1,0 +1,131 @@
+---
+import { navLinks } from '../config/data/navigation.js';
+
+const titleCompany = 'Karanda';
+const currentPath = Astro.url.pathname;
+
+// Images
+import logoKaranda from '../assets/logo-karanda.png';
+---
+
+<!-- Header Start -->
+<div class="topbar">
+    <div class="container">
+        <div class="topbar-wrap">
+            <div class="topbar-right">
+                <div class="language-area">
+                    <div class="language-btn text-white">
+                        <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <g>
+                                <path fill="white"
+                                    d="M17.5234 3.41852C17.5044 3.38925 17.4807 3.36337 17.4531 3.34196C16.5167 2.28999 15.3683 1.4481 14.0834 0.871604C12.7984 0.295111 11.406 -0.00292969 9.99766 -0.00292969C8.58931 -0.00292969 7.1969 0.295111 5.91195 0.871604C4.62699 1.4481 3.47858 2.28999 2.54219 3.34196C2.51602 3.36269 2.49334 3.38748 2.47501 3.41539V3.42321C1.21087 4.86932 0.389958 6.6489 0.110399 8.54919C-0.16916 10.4495 0.104467 12.3901 0.898569 14.139C1.69267 15.8879 2.97364 17.3711 4.58835 18.4113C6.20305 19.4515 8.08317 20.0047 10.0039 20.0047C11.9247 20.0047 13.8048 19.4515 15.4195 18.4113C17.0342 17.3711 18.3152 15.8879 19.1093 14.139C19.9034 12.3901 20.177 10.4495 19.8974 8.54919C19.6179 6.6489 18.797 4.86932 17.5328 3.42321L17.5234 3.41852ZM17.2109 15.9826C16.501 15.5682 15.7475 15.2333 14.9641 14.9841C15.4499 13.4737 15.7064 11.8988 15.725 10.3123H19.3672C19.3005 12.3903 18.5416 14.3866 17.2109 15.9841V15.9826ZM0.632819 10.3123H4.27501C4.29348 11.8994 4.54998 13.4747 5.03594 14.9857C4.25255 15.2349 3.49904 15.5697 2.78907 15.9841C1.4584 14.3866 0.699495 12.3903 0.632819 10.3123ZM2.81251 3.99196C3.51898 4.4026 4.26822 4.73478 5.04688 4.98258C4.55383 6.50292 4.2936 8.08909 4.27501 9.68727H0.632819C0.700916 7.59827 1.4685 5.59264 2.81251 3.99196ZM10.3125 5.72477C11.6851 5.70532 13.0499 5.51425 14.375 5.15602C14.8427 6.62167 15.0892 8.14889 15.1063 9.68727H10.3125V5.72477ZM10.3125 5.09977V0.643518C11.8969 0.820081 13.2813 2.32946 14.1563 4.56696C12.9017 4.90129 11.6107 5.08024 10.3125 5.09977ZM9.68751 5.09977C8.38927 5.08025 7.09835 4.90131 5.84376 4.56696C6.71876 2.32946 8.10313 0.820081 9.68751 0.643518V5.09977ZM9.68751 5.72477V9.68727H4.90001C4.91505 8.14921 5.1594 6.62199 5.62501 5.15602C6.95016 5.51424 8.31492 5.7053 9.68751 5.72477ZM4.90001 10.3123H9.68751V14.2404C8.31479 14.2608 6.95002 14.4529 5.62501 14.8123C5.16282 13.3562 4.91851 11.8398 4.90001 10.3123ZM9.68751 14.8654V19.356C8.09688 19.1779 6.70001 17.656 5.83126 15.4013C7.08976 15.0648 8.38495 14.8848 9.68751 14.8654ZM10.3125 14.8654C11.6151 14.8849 12.9103 15.0649 14.1688 15.4013C13.3 17.656 11.9031 19.1779 10.3125 19.356V14.8654ZM10.3125 14.2404V10.3123H15.1C15.0814 11.8393 14.837 13.3552 14.375 14.8107C13.0499 14.4519 11.6852 14.2603 10.3125 14.2404ZM15.725 9.68727C15.7064 8.08909 15.4462 6.50292 14.9531 4.98258C15.7318 4.73478 16.481 4.4026 17.1875 3.99196C18.5315 5.59264 19.2991 7.59827 19.3672 9.68727H15.725ZM16.7641 3.51852C16.1219 3.87875 15.4444 4.17196 14.7422 4.39352C14.1656 2.91227 13.3656 1.71852 12.4281 0.945081C14.0813 1.39084 15.5809 2.28085 16.7641 3.51852ZM7.57188 0.945081C6.63438 1.71383 5.83594 2.91071 5.25938 4.39352C4.5572 4.17196 3.87968 3.87875 3.23751 3.51852C4.42026 2.28109 5.91924 1.3911 7.57188 0.945081ZM3.21407 16.4591C3.85871 16.0948 4.53945 15.7985 5.24532 15.5748C5.82344 17.0716 6.62657 18.281 7.57032 19.0545C5.9074 18.6059 4.40018 17.708 3.21407 16.4591ZM12.4328 19.0545C13.3703 18.2732 14.1797 17.0716 14.7578 15.5748C15.4637 15.7985 16.1444 16.0948 16.7891 16.4591C15.6017 17.7087 14.0927 18.6067 12.4281 19.0545H12.4328Z" />
+                            </g>
+                        </svg>                        
+                        <span class="text-white">
+                            ESP
+                            <svg width="8" height="5" viewBox="0 0 8 5" xmlns="http://www.w3.org/2000/svg">
+                                <path fill="white" d="M8 0L4.04119 5L0 0" />
+                            </svg>
+                        </span>
+                    </div>
+                    <ul class="language-list">
+                        <li><a href="#">ENG</a></li>
+                    </ul>
+                </div>
+            </div>            
+            <div class="header-logo">
+                <a href="index.html">
+                    <img 
+                        src={logoKaranda.src} 
+                        alt={titleCompany}
+                        width="138"
+                        height="70"
+                    >
+                </a>
+            </div>
+            <div class="topbar-right">
+                <a href="#!" class="btn btn-light d-flex align-items-center justify-content-center text-uppercase lh-1 py-2">
+                    <span>Reservar ahora</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<header class="header-area style-1">
+    <div class="container d-flex flex-nowrap align-items-center justify-content-between">
+        <div class="header-logo d-lg-none d-block">
+            <a href="index.html">
+                <img 
+                    src={logoKaranda.src} 
+                    alt={titleCompany}
+                    width="115"
+                    height="58"
+                >
+            </a>
+        </div>
+        <div class="main-menu">
+            <div class="mobile-logo-area d-lg-none d-flex justify-content-center">
+                <a href="index.html" class="mobile-logo-wrap">
+                    <img alt="image" class="img-fluid light" src="https://placehold.co/135x30">
+                    <img alt="image" class="img-fluid dark" src="https://placehold.co/135x30">
+                </a>
+            </div>
+            <ul class="menu-list">
+                { 
+                    navLinks.map( (link) => (
+                        <li class={link.href === currentPath ? 'active' : ''} >
+                            <a class="text-uppercase" href={link.href}>{link.text}</a>
+                        </li>
+                    ))
+                }
+            </ul>
+            <div class="btn-area d-lg-none d-flex justify-content-center">
+                <a href="dashboard.html" class="header-btn btn-hover">
+                    <span>My Account</span>
+                    <strong></strong>
+                </a>
+            </div>
+        </div>
+        <div class="nav-right">
+            <div class="sidebar-button mobile-menu-btn">
+                <span></span>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- Header End -->
+
+<script>
+  // --- Language Dropdown Logic ---
+  const languageArea = document.querySelector<HTMLElement>('.language-area');
+  if (languageArea) {
+    const languageBtn = languageArea.querySelector<HTMLElement>('.language-btn');
+    const languageList = languageArea.querySelector<HTMLElement>('.language-list');
+
+    document.addEventListener('click', (event) => {
+      if (!languageBtn || !languageList) return;
+      const target = event.target as Node;
+
+      if (target.nodeType === 1 && (event.target as HTMLElement).closest('.language-btn')) {
+        languageList.classList.toggle('active');
+      } else if (!languageArea.contains(target)) {
+        languageList.classList.remove('active');
+      }
+    });
+  }
+
+  // --- Sticky Header Logic ---
+  const header = document.querySelector<HTMLElement>('.header-area');
+  if (header) {
+    // The 'sticky' class will be added when scrolling more than 100px
+    const stickyThreshold = 100;
+
+    const handleScroll = () => {
+      // classList.toggle is a clean way to add/remove a class based on a condition
+      header.classList.toggle('sticky', window.scrollY > stickyThreshold);
+    };
+
+    // Listen for scroll events on the window
+    window.addEventListener('scroll', handleScroll);
+  }
+</script>

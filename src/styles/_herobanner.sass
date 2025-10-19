@@ -1,3 +1,5 @@
+@use 'mixins' as *
+
 .heroBanner
   position: relative
   background-position: center
@@ -8,21 +10,24 @@
   &--inf
     display: flex
     align-items: center
-    min-height: 100vh
+    min-height: 85vh
     max-height: 875px
     h1
       text-align: center
-      font-size: 150px
-      white-space: nowrap
+      font-size: 80px
       color: white
-
-
-
+      @include minDesktop1280
+        font-size: 150px
+        white-space: nowrap
+      
+      
 
 h2
   color: var(--azul)
   span
     color: var(--naranja)
+    @include maxPhablet
+      display: block    
 
 .welcomeBlock
   padding: 50px 0
@@ -149,16 +154,23 @@ h2
   .container-fluid
     padding: 0
     margin: 0
-    display: flex
+    @include minDesktop1280
+      display: flex
+
 
   h2
     margin-bottom: 80px
+    @include maxPhablet
+      text-align: center
+      margin-bottom: 50px
     span
       color: var(--blanco)
 
   &--img,
   &--reviews
-    width: 50%
+    width: 100%
+    @include minDesktop1280
+      width: 50%
     img
       width: 100%
       display: block
@@ -166,7 +178,11 @@ h2
     img
       width: 100%
   &--reviews
-    padding: 80px 4% 0
+
+    @include maxPhablet
+      padding: 50px 0
+    @include minDesktop1280
+      padding: 80px 4% 0
     &-items
       padding: 0 50px
     &-item
@@ -225,3 +241,15 @@ h2
         top: 3px
 
 
+
+
+
+.footerPage
+  background-color: var(--naranja)
+  padding: 20px 0 50px
+  background-image: url('/fondofoot.png')
+  background-position: center center
+  background-repeat: no-repeat
+  background-size: 750px
+  &--top
+    padding: 50px 0

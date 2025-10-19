@@ -1,11 +1,16 @@
 ---
 import Layout from "../layouts/Layout.astro"
+
+import HomeImg2 from '../assets/home-img-2.png'
+import IconAirbnb from '../assets/ico-airbnb.png'
+import IconBooking from '../assets/ico-booking.png'
+
 ---
 
 <Layout>
 
   <section class="heroBanner homePageBanner mb-0" 
-    style="background-image: url(https://placehold.co/2220x875);"
+    style="background-image: url(hero-resenas.jpg);"
   >
     <div class="heroBanner--inf align-items-end">
       <div class="container">
@@ -17,7 +22,7 @@ import Layout from "../layouts/Layout.astro"
     <div class="reviewsBlock py-5">
       <div class="container d-flex align-items-center">
         <div class="reviewsBlock--img">
-          <img src="https://placehold.co/700x900" alt="" class="img-fluid d-block">
+          <img src={HomeImg2.src} alt="" class="w-100 d-block">
         </div>
         <div class="reviewsBlock--reviews">
           <div class="reviewsBlock--reviews-items mt-5">
@@ -34,10 +39,10 @@ import Layout from "../layouts/Layout.astro"
               <div class="imageBlock--btns pt-3">
                 <div class="container text-end d-flex justify-content-end gap-2 pb-5">
                   <a href="#!" class="btn btn-circle btn-airbnb rounded-circle d-flex align-items-center justify-content-center text-align-center">
-                    <i class="bi bi-emoji-smile"></i>
+                    <img src={IconAirbnb.src} alt="Airbnb" class="d-block w-100">
                   </a>
                   <a href="#!" class="btn btn-circle btn-booking rounded-circle d-flex align-items-center justify-content-center text-align-center">
-                    <i class="bi bi-emoji-smile"></i>
+                    <img src={IconBooking.src} alt="Booking" class="d-block w-100">
                   </a>
                 </div>
               </div>                

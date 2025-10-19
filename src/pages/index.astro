@@ -2,8 +2,18 @@
 import HeroBanner from '../components/HeroBanner.astro';
 import Layout from '../layouts/Layout.astro';
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+
+// images
+import HomeImg1 from '../assets/home-img-1.jpg'
+import HomeImg2 from '../assets/home-img-2.png'
+import HomeImg3 from '../assets/home-img-3.png'
+import HomeImg4 from '../assets/home-img-4.png'
+import HomeImg5 from '../assets/home-img-5.jpg'
+import HomeImg6 from '../assets/home-img-6.png'
+import HomeImg7 from '../assets/home-img-7.png'
+import HomeImg8 from '../assets/home-img-8.jpg'
+import HomeImg9 from '../assets/home-img-9.jpg'
+
 ---
 
 <Layout>
@@ -29,7 +39,7 @@ import Layout from '../layouts/Layout.astro';
         </div>
         <div class="col-12 col-md-6">
           <div class="welcomeBlock--img">
-            <img src="https://placehold.co/580x385" alt="" class="img-fluid">
+            <img src={HomeImg1.src} alt="Imagen" class="img-fluid">
           </div>
         </div>
 
@@ -66,15 +76,15 @@ import Layout from '../layouts/Layout.astro';
 
       <div class="row">
         <div class="col col-12 col-md-6 col-lg-4">
-          <img src="https://placehold.co/590x1060" alt="" class="img-fluid">
+          <img src={HomeImg2.src} height="800"  alt="Test" class="d-block w-100">
           <p>CAMAS BALINESAS</p>
         </div>
         <div class="col col-12 col-md-6 col-lg-4">
-          <img src="https://placehold.co/590x1060" alt="" class="img-fluid">
+          <img src={HomeImg3.src} height="800"  alt="Test" class="d-block w-100">
           <p>ALBERCA CON BAR</p>
         </div>
         <div class="col col-12 col-md-6 col-lg-4">
-          <img src="https://placehold.co/590x1060" alt="" class="img-fluid">
+          <img src={HomeImg4.src} height="800"  alt="Test" class="d-block w-100">
           <p>HAMACAS</p>
         </div>
       </div>
@@ -90,7 +100,7 @@ import Layout from '../layouts/Layout.astro';
       <div class="row">
         <div class="col col-12 col-lg-4">
           <div class="conoceBlock--card">
-            <img src="https://placehold.co/520x335" alt="" class="img-fluid">
+            <img src={HomeImg5.src} alt="" class="img-fluid">
             <div class="conoceBlock--card-foot">
               <p>COCINA EQUIPADA</p>
               <a href="#!" class="btn btn-warning rounded-pill text-white px-4 py-2">CONOCE MÁS</a>
@@ -99,7 +109,7 @@ import Layout from '../layouts/Layout.astro';
         </div>
         <div class="col col-12 col-lg-4">
           <div class="conoceBlock--card">
-            <img src="https://placehold.co/520x335" alt="" class="img-fluid">
+            <img src={HomeImg6.src} alt="" class="img-fluid">
             <div class="conoceBlock--card-foot">
               <p>COCINA EQUIPADA</p>
               <a href="#!" class="btn btn-warning rounded-pill text-white px-4 py-2">CONOCE MÁS</a>
@@ -108,7 +118,7 @@ import Layout from '../layouts/Layout.astro';
         </div>
         <div class="col col-12 col-lg-4">
           <div class="conoceBlock--card">
-            <img src="https://placehold.co/520x335" alt="" class="img-fluid">
+            <img src={HomeImg7.src} alt="" class="img-fluid">
             <div class="conoceBlock--card-foot">
               <p>COCINA EQUIPADA</p>
               <a href="#!" class="btn btn-warning rounded-pill text-white px-4 py-2">CONOCE MÁS</a>
@@ -120,7 +130,7 @@ import Layout from '../layouts/Layout.astro';
     </div>
   </div>
 
-  <div class="ctaBigBlock" style="background-image: url(https://placehold.co/1920x875);" >
+  <div class="ctaBigBlock" style={`background-image: url(${HomeImg8.src});`} >
     <div class="container">
       <div class="ctaBigBlock--copy">
         <h3>En KARANDA</h3>
@@ -135,7 +145,7 @@ import Layout from '../layouts/Layout.astro';
   <div class="reviewsBlock">
     <div class="container-fluid">
       <div class="reviewsBlock--img">
-        <img src="https://placehold.co/700" alt="" class="img-fluid d-block">
+        <img src={HomeImg9.src} alt="" class="img-fluid d-block">
       </div>
       <div class="reviewsBlock--reviews">
         <h2>Reseñas <span>Villas</span></h2>

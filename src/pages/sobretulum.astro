@@ -2,13 +2,15 @@
 import HeroBanner from '../components/HeroBanner.astro';
 import Layout from '../layouts/Layout.astro';
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Tulum1 from '../assets/destinos-1.jpg'
+import Tulum2 from '../assets/destinos-2.jpg'
+import Tulum3 from '../assets/destinos-3.jpg'
+
 ---
 
 <Layout>
   <section class="heroBanner homePageBanner" 
-    style="background-image: url(https://placehold.co/2220x875);"
+    style="background-image: url(hero-destinos.jpg);"
   >
     <div class="heroBanner--inf align-items-end">
       <div class="container">
@@ -40,7 +42,7 @@ import Layout from '../layouts/Layout.astro';
 
         <div class="col-12 col-md-6">
           <div class="welcomeBlock--img">
-            <img src="https://placehold.co/580" alt="" class="img-fluid">
+            <img src={Tulum1.src} alt="" class="img-fluid">
           </div>
         </div>
 
@@ -79,7 +81,7 @@ import Layout from '../layouts/Layout.astro';
         </div>         
         <div class="col-12 col-md-6">
           <div class="welcomeBlock--img">
-            <img src="https://placehold.co/580" alt="" class="img-fluid">
+            <img src={Tulum2.src} alt="" class="img-fluid">
           </div>
         </div>       
 
@@ -93,7 +95,7 @@ import Layout from '../layouts/Layout.astro';
 
         <div class="col-12 col-md-6">
           <div class="welcomeBlock--img">
-            <img src="https://placehold.co/580" alt="" class="img-fluid">
+            <img src={Tulum3.src} alt="" class="img-fluid">
           </div>
         </div>
 

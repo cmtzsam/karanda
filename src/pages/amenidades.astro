@@ -1,10 +1,18 @@
 ---
 import Layout from '../layouts/Layout.astro';
 
+import AmenidadesImg1 from '../assets/amenidades-1.jpg';
+import AmenidadesImg2 from '../assets/amenidades-2.jpg';
+import AmenidadesImg3 from '../assets/amenidades-3.jpg';
+
+import HomeImg2 from '../assets/home-img-2.png'
+import HomeImg3 from '../assets/home-img-3.png'
+import HomeImg4 from '../assets/home-img-4.png'
+
 ---
 <Layout>
   <section class="heroBanner homePageBanner" 
-    style="background-image: url(https://placehold.co/2220x875);"
+    style="background-image: url(hero-amenidades.jpg);"
   >
     <div class="heroBanner--inf align-items-end">
       <div class="container">
@@ -22,15 +30,15 @@ import Layout from '../layouts/Layout.astro';
 
       <div class="row">
         <div class="col col-12 col-md-6 col-lg-4">
-          <img src="https://placehold.co/590x1060" alt="" class="img-fluid">
+          <img src={HomeImg2.src} height="800" alt="" class="w-100 d-block">
           <p>CAMAS BALINESAS</p>
         </div>
         <div class="col col-12 col-md-6 col-lg-4">
-          <img src="https://placehold.co/590x1060" alt="" class="img-fluid">
+          <img src={HomeImg3.src} height="800" alt="" class="w-100 d-block">
           <p>ALBERCA CON BAR</p>
         </div>
         <div class="col col-12 col-md-6 col-lg-4">
-          <img src="https://placehold.co/590x1060" alt="" class="img-fluid">
+          <img src={HomeImg4.src} height="800" alt="" class="w-100 d-block">
           <p>HAMACAS</p>
         </div>
       </div>
@@ -40,13 +48,13 @@ import Layout from '../layouts/Layout.astro';
   
   
   <div class="imageBlock pb-4">
-    <img src="https://placehold.co/1920x900" alt="" class="img-fluid d-block mx-auto">
+    <img src={AmenidadesImg1.src} alt="" class="img-fluid w-100 d-block mx-auto">
   </div>
   <div class="imageBlock pb-4">
-    <img src="https://placehold.co/1920x900" alt="" class="img-fluid d-block mx-auto">
+    <img src={AmenidadesImg2.src} alt="" class="img-fluid w-100 d-block mx-auto">
   </div>
   <div class="imageBlock pb-4">
-    <img src="https://placehold.co/1920x900" alt="" class="img-fluid d-block mx-auto">
+    <img src={AmenidadesImg3.src} alt="" class="img-fluid w-100 d-block mx-auto">
   </div>
   
 </Layout>

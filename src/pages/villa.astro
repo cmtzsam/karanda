@@ -1,0 +1,132 @@
+---
+import Layout from "../layouts/Layout.astro"
+
+import AmenidadesImg1 from '../assets/amenidades-1.jpg';
+
+import HeroResenas from '../assets/hero-resenas.jpg';
+
+import villaIco1 from '../assets/villa-ico-1.png';
+import villaIco2 from '../assets/villa-ico-2.png';
+import villaIco3 from '../assets/villa-ico-3.png';
+import villaIco4 from '../assets/villa-ico-4.png';
+
+
+
+---
+
+
+<Layout>
+  <section class="heroBanner homePageBanner mb-0" 
+    style=`background-image: url(${HeroResenas.src});`
+  >
+    <div class="heroBanner--inf align-items-end">
+      <div class="container">
+        <h1 class="text-start pb-4">Villa</h1>
+      </div>
+    </div>
+  </section>    
+
+
+  <!-- Mas informacion -->
+  <section class="masInformacionSection">
+    <div class="container">
+
+      <h2>Más información</h2>
+
+      <div class="row">
+
+        <div class="col col-12 col-lg-6">
+          <div class="masInformacionSection--copy pb-5">
+            <div class="masInformacionSection--copy-title">
+              <div class="ico">
+                <img src={villaIco1.src} alt="" />
+              </div>
+              <div class="titulo">
+                <h3>El alojamiento</h3>
+                <h4>Dormitorios:</h4>
+              </div>
+            </div>
+            <div class="masInformacionSection--copy-desc">
+              <p><strong>4</strong> Amplios dormitorios:</p>
+              <p><strong>3</strong> Dormitorios con camas tamaño king + camas individuales extraíbles.</p>
+              <p><strong>1</strong>  dormitorio con dos camas tamaño queen.</p>
+              <br>
+              <p><i>Todas las habitaciones incluyen:</i></p>
+              <p>Armarios integrados.</p>
+              <p>Televisores inteligentes.</p>
+              <p>Aire acondicionado.</p>
+              <br>
+              <p><strong>4</strong> baños completos con acabados modernos.</p>
+              <p>Cocina totalmente equipada con todo lo necesario para cocinar en casa.</p>
+              <p>Comedor interior y sala de estar frente a la piscina, creando una hermosa conexión interior-exterior.</p>
+              <p>La sala de estar incluye un televisor inteligente y un sistema de sonido, perfecto para relajarse por la noche.</p>
+            </div>
+          </div>
+          <div class="masInformacionSection--copy pb-5">
+            <div class="masInformacionSection--copy-title">
+              <div class="ico">
+                <img src={villaIco2.src} alt="" />
+              </div>
+              <div class="titulo">
+                <h3>SERVICIOS PRIVADOS</h3>
+              </div>
+            </div>
+            <div class="masInformacionSection--copy-desc">
+              <p>- Dos piscinas privadas: una en la planta baja y otra en la azotea.</p>
+              <p>- Salón en la azotea con parrilla para barbacoa, tumbonas y comedor.</p>
+              <p>- Wifi de alta velocidad en toda la villa.</p>
+              <p>- Personal opcional en el alojamiento disponible para ayudar con la preparación de comidas y el servicio básico (no un chef profesional, pero alguien que puede ayudar a preparar y servir comidas).</p>
+            </div>
+          </div>
+        </div>
+        <div class="col col-12 col-lg-6">
+          <div class="masInformacionSection--copy pb-5">
+            <div class="masInformacionSection--copy-title">
+              <div class="ico">
+                <img src={villaIco3.src} alt="" />
+              </div>
+              <div class="titulo">
+                <h3>SERVICIOS DE LA COMUNIDAD</h3>
+              </div>
+            </div>
+            <div class="masInformacionSection--copy-desc">
+              <p>3 piscinas compartidas, incluida una de las piscinas más grandes de Tulum.</p>
+              <p>Cancha de paddle en la azotea con vistas a la selva.</p>
+              <p>Seguridad cerrada 24/7 para tu tranquilidad.</p>
+              <p>Terrenos tranquilos y bien cuidados rodeados de</p>
+            </div>
+          </div>
+          <div class="masInformacionSection--copy pb-5">
+            <div class="masInformacionSection--copy-title">
+              <div class="ico">
+                <img src={villaIco4.src} alt="" />
+              </div>
+              <div class="titulo">
+                <h3>EXPERIENCIA DEL HÚESPED</h3>
+              </div>
+            </div>
+            <div class="masInformacionSection--copy-desc">
+              <p>Nuestro equipo dedicado a la experiencia del huésped te ayudará a planificar un viaje a tu medida:</p>
+              <p>Cenas privadas en la villa.</p>
+              <p>Servicios de spa.</p>
+              <p>Cenote y paseos en barco.</p>
+              <p>Reservaciones en restaurantes, reservaciones en clubes de playa y mucho más.</p>
+              <p>Planificación previa a la llegada disponible para garantizar que todo esté listo antes de que aterrices.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+  <!-- Mas informacion -->
+
+
+  <div class="imageBlock ">
+    <img src={AmenidadesImg1.src} alt="" class="img-fluid w-100 d-block mx-auto">
+  </div>
+
+</Layout>
+
+

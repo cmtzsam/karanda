@@ -1,5 +1,10 @@
 @use 'mixins' as *
 
+.btn-airbnb
+  background-color: var(--airbnbrosa)
+.btn-booking
+  background-color: var(--bookingazul)
+
 .heroBanner
   position: relative
   background-position: center
@@ -177,7 +182,6 @@ h2
     img
       width: 100%
   &--reviews
-
     @include maxPhablet
       padding: 50px 0
     @include minDesktop1280
@@ -186,6 +190,15 @@ h2
       padding: 0 50px
     &-item
       position: relative
+
+      &.alternativeColor
+        .reviewsBlock--reviews-item-who
+          background-color: var(--azul)
+        .reviewsBlock--reviews-item-copy
+          background-color: var(--naranja)
+          h3, h4, p
+            color: var(--gris)
+
       &-who
         width: 70px
         height: 70px
@@ -230,10 +243,6 @@ h2
       width: 50px
       height: 50px
       padding: 0
-      &.btn-airbnb
-        background-color: var(--airbnbrosa)
-      &.btn-booking
-        background-color: var(--bookingazul)
       i
         color: var(--blanco)
         font-size: 25px
@@ -285,3 +294,32 @@ h2
   background-size: 750px
   &--top
     padding: 50px 0
+
+
+
+
+
+// Villas - Productos
+.productInformation
+  padding-top: 50px
+  .gallery-container
+    .arrowGallery
+      svg, path
+        fill: var(--blanco)
+    .swiper-pagination-bullet
+      background-color: var(--naranja)
+  #gallery-swiper-thumb
+    .swiper-slide
+      opacity: 0.5
+      cursor: pointer
+    .swiper-slide-thumb-active
+      opacity: 1
+
+.thumbsSlider
+  margin-top: 15px
+
+
+
+
+
+

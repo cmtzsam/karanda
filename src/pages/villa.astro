@@ -1,7 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro"
 
-import AmenidadesImg1 from '../assets/amenidades-1.jpg';
+import AmenidadesImg1 from '../assets/hero-amenidades.jpg';
 
 import HeroResenas from '../assets/hero-resenas.jpg';
 
@@ -10,12 +10,48 @@ import villaIco2 from '../assets/villa-ico-2.png';
 import villaIco3 from '../assets/villa-ico-3.png';
 import villaIco4 from '../assets/villa-ico-4.png';
 
+import IconAirbnb from '../assets/ico-airbnb.png'
+import IconBooking from '../assets/ico-booking.png'
 
+import Gallery from "../components/Gallery.astro";
+
+
+const galleryImages = [
+  {
+    src: '/villa3-1.jpg', // Archivo en public/
+    alt: 'Villa 3 - 1',
+    title: 'Villa 3',
+    width: 1200,
+    height: 800
+  },
+  {
+    src: '/villa3-2.jpg', // Archivo en public/
+    alt: 'Villa 3 - 2',
+    title: 'Villa 3',
+    width: 1200,
+    height: 800
+  },
+  {
+    src: '/villa3-3.jpg', // Archivo en public/
+    alt: 'Villa 3 - 3',
+    title: 'Villa 3',
+    width: 1200,
+    height: 800
+  },
+  {
+    src: '/villa3-4.jpg', // Archivo en public/
+    alt: 'Villa 3 - 4',
+    title: 'Villa 3',
+    width: 1200,
+    height: 800
+  },
+];
 
 ---
 
 
 <Layout>
+
   <section class="heroBanner homePageBanner mb-0" 
     style=`background-image: url(${HeroResenas.src});`
   >
@@ -24,7 +60,83 @@ import villaIco4 from '../assets/villa-ico-4.png';
         <h1 class="text-start pb-4">Villa</h1>
       </div>
     </div>
-  </section>    
+  </section> 
+  
+  
+  <!-- Product info -->
+   <section class="productInformation">
+    <div class="container">
+      <div class="row justify-content-between">
+        <!-- Start gallery -->
+        <div class="col col-12 col-md-6 col-lg-7">
+          <div class="productInformation--photos w-100">
+            <!-- Galeria product -->
+            <Gallery 
+              images={galleryImages}
+              imagesThumbs={galleryImages}
+            />
+            <!-- Galeria product -->
+            <!-- Buttons product -->
+            <div class="productInformation--btns d-flex align-items gap-4 py-4">
+              <a href="#!" class="rounded-pill btn-airbnb d-flex align-items-center justify-content-center text-align-center px-3 py-2">
+                <img src={IconAirbnb.src} alt="Airbnb" class="d-block mw-100" width="40" height="40" />
+                <span class="d-block w-100 text-white pe-3 fw-light">RESERVA AQUÍ</span>
+              </a>
+              <a href="#!" class="rounded-pill btn-booking d-flex align-items-center justify-content-center text-align-center px-3 py-2">
+                <img src={IconBooking.src} alt="Booking" class="d-block mw-100" width="40" height="40" />
+                <span class="d-block w-100 text-white pe-3 fw-light">RESERVA AQUÍ</span>
+              </a>
+            </div>
+            <!-- Buttons product -->
+          </div>
+        </div>
+        <!-- End gallery -->
+
+        <!-- Start information -->
+        <div class="col col-12 col-md-6 col-lg-4">
+          <div class="productInformation--data d-block mx-auto">
+            <div class="reviewsBlock--reviews-items px-0">
+              <div class="reviewsBlock--reviews-item ">
+                <div class="reviewsBlock--reviews-item-copy">
+                  <h2 class="color-orange">Villas</h2>
+                  <p>
+                    Las villas cuentan con una gran variedad de características excepcionales que satisfacen todas tus necesidades. Los huéspedes pueden disfrutar de servicio de conserjería, junto con acceso a piscinas más grandes y una cancha de paddle en la azotea. Esta propiedad está diseñada para crear experiencias memorables a través de un servicio al cliente excepcional.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="reviewsBlock--reviews-items px-0 pt-5">
+              <div class="reviewsBlock--reviews-item alternativeColor">
+                <div class="reviewsBlock--reviews-item-who">
+                  <i class="bi bi-person-circle"></i>
+                </div>
+                <div class="reviewsBlock--reviews-item-copy">
+                  <h3>YARELI - CDMX</h3>
+                  <p>El alojamiento estaba hermoso, todo muy limpio, todos los días no se iban a Niños hacían el aseo y la comunicación estuvo excelente, me encantó el lugar y las personas se lo Super recomiendo.</p>
+                </div>
+              </div>
+            </div>
+            <div class="reviewsBlock--reviews-items px-0 pt-5">
+              <div class="reviewsBlock--reviews-item alternativeColor">
+                <div class="reviewsBlock--reviews-item-who">
+                  <i class="bi bi-person-circle"></i>
+                </div>
+                <div class="reviewsBlock--reviews-item-copy">
+                  <h3>GARRET, LOS ÁNGELES</h3>
+                  <p>La villa estaba muy limpia. La ubicación estaba lo suficientemente cerca como para llegar a nuestros destinos en un momento muy razonable. El servicio de conserjería fue extremadamente servicial y absolutamente necesario. El aire acondicionado funcionó bien.</p>
+                </div>
+              </div>
+            </div>
+            <p class="text-end pt-4">
+              <a href="#!" class="btn-warning rounded-pill d-inline-flex align-items-center justify-content-center text-align-center py-3 text-white" style="width: 100%; max-width: 200px;">RESERVA AQUÍ</a> 
+            </p>           
+          </div>          
+        </div>
+        <!-- End information -->
+      </div> <!-- End row -->
+    </div> <!-- End container -->
+   </section>
+  <!-- Product info -->
 
 
   <!-- Mas informacion -->

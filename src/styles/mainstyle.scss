@@ -14,17 +14,42 @@ h1{
 h2{
   font-family: 'Anglecia Pro Dsp', sans-serif;
   font-size: 50px;
+  color: var(--azul);
+  @include maxTablet{
+    font-size: 40px;
+  }
+  @include maxMobile{
+    font-size: 33px;
+  }
   span{
     font-family: 'Jadyn Maria', sans-serif;
+    color: var(--naranja);
     @include minDesktop1280{
       font-size: 2em;
     }
+    @include maxTablet{
+      display: block;
+      font-size: 2.25em;
+      line-height: 1;
+      position: relative;
+      margin: -30px 0 0;      
+    }
+    @include maxMobile{
+      font-size: 2em;
+      line-height: 1;
+      position: relative;
+      margin: -10px 0 0;
+    }    
   }
 }
+
 body{
   font-family: 'Raleway', sans-serif;
   color: var(--negro)
 }
 p{
   font-size: 18px;
+  @include maxMobile{
+    font-size: 15px;
+  }
 }

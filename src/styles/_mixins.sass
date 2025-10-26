@@ -5,7 +5,7 @@ $desktop: $container-width
 $desktop-1280: 1280px
 $desktop-small: 1140px
 $tablet-landscape: 1024px
-$tablet-portrait: 960px
+$tablet-portrait: 990px
 $tablet: 768px
 $phablet: 740px
 $mobile: 568px
@@ -15,6 +15,10 @@ $mobile-portrait: 420px
 // min desktopBig
 @mixin minDesktopSize
   @media ( min-width: $desktop)
+    @content
+// max 1280
+@mixin maxDesktop1280
+  @media ( max-width: $desktop-1280)
     @content
 // min 1280
 @mixin minDesktop1280

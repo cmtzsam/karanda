@@ -464,7 +464,7 @@ header.style-1 {
       ul {
         li{
           a{
-            color: var(--azul);
+            color: var(--azul)!important;
           }
         }
       }
@@ -3490,6 +3490,7 @@ header.style-2 {
         z-index: 2;
         top: 0;
         left: -45px;
+        margin: 0;
       }
     }
     p{
@@ -3498,6 +3499,9 @@ header.style-2 {
     button{
       background-color: var(--verde2wtf);
       text-transform: uppercase;
+      @media (max-width: 600px){
+        width: 100%;
+      }
     }
   }
   .enquery-section-title {

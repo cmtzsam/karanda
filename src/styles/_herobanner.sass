@@ -1,5 +1,41 @@
 @use 'mixins' as *
 
+
+#mainHeader
+  &.sticky
+    .main-menu ul li a
+      @media ( min-width: 992px )
+        color: var(--azul)!important
+  .main-menu
+    @media ( max-width: 991px )
+      background-color: var(--azul)
+      border-right-color: var(--celeste) 
+    ul
+      > li
+        > a
+          color: var(--blanco)!important
+  .langBtnMobile
+    padding-top: 30px
+    .dropdown-menu
+      background-color: var(--celeste)
+      border-radius: 0
+      border: 1px solid var(--celeste)
+      li
+        padding: 0
+        width: 100%
+        display: block
+        border: 0
+        a
+          padding: 15px
+          border-radius: 0
+          font-size: 15px        
+        &.active
+          a
+            background-color: var(--azul)
+            color: var(--celeste)
+            border: 0
+
+
 .btn-airbnb
   background-color: var(--airbnbrosa)
 .btn-booking
@@ -11,12 +47,25 @@
   background-size: cover
   background-repeat: no-repeat 
   margin-bottom: 40px
+  @include maxTablet
+    margin-bottom: 0px
 
   &--inf
     display: flex
     align-items: center
-    min-height: 85vh
     max-height: 875px
+    min-height: 85vh
+    position: relative
+    @include maxDesktop1280
+      height: 600px
+      min-height: 0
+    @include maxTablet
+      height: 600px
+      min-height: 0
+    @include maxMobile
+      height: 360px
+    @include maxMobilePortrait
+      height: 320px
     h1
       text-align: center
       font-size: 80px
@@ -24,24 +73,35 @@
       @include minDesktop1280
         font-size: 150px
         white-space: nowrap
+      @include maxMobile
+        font-size: 45px
+    &::before
+      content: ""
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      background-color: rgba(0,0,0,0.3)
+    .container
+      z-index: 3
       
       
 
-h2
-  color: var(--azul)
-  span
-    color: var(--naranja)
-    @include maxPhablet
-      display: block    
+
 
 .welcomeBlock
   padding: 50px 0
-
-
+  @include maxDesktop1280
+    padding: 25px 0
+  @include maxMobile
+    padding: 30px 0
   &--copy
     width: 100%
     margin: 0 auto
     text-align: right
+    @include maxDesktop1280
+      text-align: center
     &-large
       text-align: center
       width: 100%
@@ -54,6 +114,11 @@ h2
       margin-left: auto
       font-weight: 500
       margin-top: 20px
+      @include maxDesktop1280
+        margin: 25px auto
+        max-width: 100%
+      @include maxMobile
+        margin: 15px auto
       i
         color: var(--naranja)
         font-size: 30px
@@ -61,18 +126,31 @@ h2
 
 .instalacionesBlock
   padding: 50px 0 100px
+  @include maxDesktop1280
+    padding: 25px 0
   h2
     padding-bottom: 30px
   p
-    font-size: 22px
     color: var(--naranja)
     font-weight: 500
     margin: 20px 0 0
+    font-size: 22px
+    @include maxDesktop1280
+      font-size: 20px
+      margin: 20px auto 30px
+      text-align: center
+    @include maxMobile
+      font-size: 18px
+    
 
 
 .conoceBlock
   background-color: var(--azul) 
   padding: 80px 0 140px
+  @include desktop1280ToBig
+    padding: 0px 0 50px
+  @include maxDesktop1280
+    padding: 50px 0 20px
   h2, p
     text-align: center
   h2
@@ -81,18 +159,45 @@ h2
     color: var(--blanco)
     font-size: 22px
     padding: 10px 0 80px
+    @include desktop1280ToBig
+      padding: 0px 0 50px
+    @include maxDesktop1280
+      padding: 10px 0 30px
+    @include maxTablet
+      padding: 10px 0 30px
+    @include maxMobile
+      font-size: 15px
+      padding: 20px 0 40px
+  .row
+    .col
+      @include tabletPortraitToDesktopSmall
+        width: 50%
   &--card
+    @include maxDesktop1280
+      padding-bottom: 20px
     &-foot
       display: flex
       align-items: center
       padding: 10px 0
       margin-top: 10px
+      @include maxTablet
+        padding: 20px 0 30px
+      @include maxMobile
+        flex-flow: column
+        justify-content: center
+        text-align: center
+        padding-bottom: 20px
       p, a
         font-size: 1rem
       p
         width: 50%
         margin-right: auto
         padding: 0
+        @include maxTablet
+          text-align: left
+        @include maxMobile
+          width: 100%
+          padding-bottom: 10px
       
 
 
@@ -103,6 +208,15 @@ h2
   height: 800px
   background-position: center
   background-size: cover
+  @include desktop1280ToBig
+    height: auto
+    padding: 80px 0
+  @include maxDesktop1280
+    height: auto
+    padding: 80px 0
+  @include maxMobile
+    height: auto
+    padding: 30px 0
   &::before
     content: ""
     position: absolute
@@ -119,6 +233,10 @@ h2
     margin-left: auto
     position: relative
     z-index: 99
+    @include maxDesktop1280
+      margin: 0 auto
+    @include maxMobile
+      text-align: center
     h3, h2 span, p
       color: var(--blanco)
     h2
@@ -131,17 +249,29 @@ h2
         transform: translateY(33%)
         line-height: 1
         display: block
+        @include maxMobile
+          position: relative
+          transform: none
+          margin-top: -35px
     h3
       font-size: 1rem
     p
       font-size: 22px
       padding-left: 30px
       padding-top: 40px
+      @include maxMobile
+        padding-left: 0
+        font-size: 17px
+        padding-top: 15px
 
 
 .pageReviews
+  @include maxTablet
+    padding: 0 0!important  
   .reviewsBlock
     background-color: var(--blanco)
+    @include maxTablet
+      padding: 0 0!important
     &--img
       position: relative
       z-index: 1
@@ -160,16 +290,17 @@ h2
     margin: 0
     @include minDesktop1280
       display: flex
-
-
   h2
     margin-bottom: 80px
-    @include maxPhablet
+    @include maxDesktop1280
       text-align: center
+      margin-bottom: 30px
+    @include maxPhablet
       margin-bottom: 50px
+    @include maxMobile
+      margin-bottom: 30px
     span
       color: var(--blanco)
-
   &--img,
   &--reviews
     width: 100%
@@ -182,14 +313,21 @@ h2
     img
       width: 100%
   &--reviews
+    @include maxDesktop1280
+      padding: 30px 0
     @include maxPhablet
       padding: 50px 0
     @include minDesktop1280
-      padding: 80px 4% 0
+      padding: 60px 4% 0
     &-items
       padding: 0 50px
+      @include maxMobile
+        padding: 0 15px
     &-item
       position: relative
+      @include maxDesktop1280
+        max-width: 600px
+        margin: 0 auto
 
       &.alternativeColor
         .reviewsBlock--reviews-item-who
@@ -214,6 +352,11 @@ h2
         position: absolute
         left: -35px
         top: -35px
+        @include maxMobile
+          left: 0
+          top: 0
+          position: relative
+          margin: 0 auto 5px
         i
           font-size: 55px
           display: block
@@ -226,6 +369,8 @@ h2
         background-color: var(--azul)
         border-radius: 20px
         padding: 30px 35px
+        @include maxMobile
+          padding: 25px
         h3, h4, a
           color: var(--gris)
         h3, h4
@@ -235,6 +380,8 @@ h2
           padding: 15px 0
           margin: 0
           font-size: 17px
+          @include maxMobile
+            font-size: 14px
 
 
 .imageBlock
@@ -294,6 +441,8 @@ h2
   background-size: 750px
   &--top
     padding: 50px 0
+    @include maxMobile
+      padding: 20px 0
 
 
 
@@ -317,7 +466,6 @@ h2
 
 .thumbsSlider
   margin-top: 15px
-
 
 
 

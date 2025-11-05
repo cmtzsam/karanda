@@ -12,6 +12,10 @@ export const navLinks = [
     href: "/departamentos",
   },
   {
+    text: "Villas",
+    href: "/villas",
+  },
+  {
     text: "Resenas",
     href: "/resenas",
   },

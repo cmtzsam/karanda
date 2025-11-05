@@ -8,12 +8,12 @@ export const navLinks = [
     href: "/amenidades",
   },
   {
-    text: "Departamentos",
-    href: "/departamentos",
-  },
-  {
     text: "Villas",
     href: "/villa",
+  },  
+  {
+    text: "Departamentos",
+    href: "/departamentos",
   },
   {
     text: "Resenas",

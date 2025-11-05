@@ -36,6 +36,22 @@ import 'swiper/css/pagination';
 import 'photoswipe/style.css';
 ---
 
+<style>
+  .swiper-pagination{
+    display: none;
+  }
+  .arrowGallery{
+    display: none;
+  }  
+  .imagecrop{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-height: 900px;
+    overflow: hidden;
+  }
+</style>
 <!-- Estructura HTML simplificada -->
 <div class="gallery-container">
   <div class="swiper" id="gallery-swiper2">
@@ -43,12 +59,14 @@ import 'photoswipe/style.css';
       {images.map((image, index) => (
         <div class="swiper-slide">
           <div class="image-container" data-pswp-src={image.src} data-pswp-width={image.width || 1200} data-pswp-height={image.height || 800}>
-            <img 
-              src={image.src}
-              alt={image.alt}
-              loading="lazy"
-              class="gallery-image img-fluid w-100"
-            />
+            <div class="imagecrop">
+              <img 
+                src={image.src}
+                alt={image.alt}
+                loading="lazy"
+                class="gallery-image img-fluid w-100"
+              />            
+            </div>
           </div>
         </div>
       ))}

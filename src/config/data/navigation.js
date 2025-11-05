@@ -13,7 +13,7 @@ export const navLinks = [
   },
   {
     text: "Villas",
-    href: "/villas",
+    href: "/villa",
   },
   {
     text: "Resenas",

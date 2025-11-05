@@ -48,7 +48,7 @@ import 'photoswipe/style.css';
     display: flex;
     justify-content: center;
     align-items: center;
-    max-height: 900px;
+    max-height: 800px;
     overflow: hidden;
   }
 </style>
@@ -101,7 +101,7 @@ import 'photoswipe/style.css';
 
   document.addEventListener('DOMContentLoaded', () => {
     // Inicializar Swiper
-    const swiperThumb = new Swiper("#gallery-swiper2-thumb", {
+    const swiperThumb2 = new Swiper("#gallery-swiper2-thumb", {
       loop: true,
       freeMode: true,
       watchSlidesProgress: true,
@@ -117,7 +117,7 @@ import 'photoswipe/style.css';
       },  
       spaceBetween: 15,    
     });
-    const swiper = new Swiper('#gallery-swiper2', {
+    const swiper2 = new Swiper('#gallery-swiper2', {
       modules: [Navigation, Pagination, Autoplay, Thumbs],
       loop: true,
       slidesPerView: 1,
@@ -135,28 +135,28 @@ import 'photoswipe/style.css';
         clickable: true,
       },
       thumbs: {
-        swiper: swiperThumb
+        swiper: swiperThumb2
       }
     });
 
 
     // Manejar clicks en las imágenes manualmente
     document.addEventListener('click', (e) => {
-      const clickedContainer = e.target.closest('.image-container');
+      const clickedContainer2 = e.target.closest('.image-container');
       
-      if (clickedContainer) {
+      if (clickedContainer2) {
         e.preventDefault();
         e.stopPropagation();
         
         // Pausar autoplay
-        swiper.autoplay?.stop();
+        swiper2.autoplay?.stop();
         
         // Obtener todas las imágenes
         const allContainers = document.querySelectorAll('.image-container');
-        const clickedIndex = Array.from(allContainers).indexOf(clickedContainer);
+        const clickedIndex = Array.from(allContainers).indexOf(clickedContainer2);
         
         // Crear datos para PhotoSwipe
-        const items = Array.from(allContainers).map((container) => ({
+        const items2 = Array.from(allContainers).map((container) => ({
           src: container.dataset.pswpSrc,
           width: parseInt(container.dataset.pswpWidth) || 1200,
           height: parseInt(container.dataset.pswpHeight) || 800,
@@ -167,8 +167,8 @@ import 'photoswipe/style.css';
         import('photoswipe').then((PhotoSwipeModule) => {
           const PhotoSwipe = PhotoSwipeModule.default;
           
-          const pswp = new PhotoSwipe({
-            dataSource: items,
+          const pswp2 = new PhotoSwipe({
+            dataSource: items2,
             index: clickedIndex,
             
             // Configuración
@@ -188,12 +188,12 @@ import 'photoswipe/style.css';
           });
           
           // Event listener para reanudar autoplay
-          pswp.on('close', () => {
-            swiper.autoplay?.start();
+          pswp2.on('close', () => {
+            swiper2.autoplay?.start();
           });
           
           // Inicializar PhotoSwipe
-          pswp.init();
+          pswp2.init();
           
         }).catch(error => {
           console.error('Error loading PhotoSwipe:', error);

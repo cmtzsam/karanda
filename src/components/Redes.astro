@@ -1,0 +1,30 @@
+---
+interface Props {
+  class?: string;
+}
+
+const { class: className } = Astro.props;
+---
+<style>
+  .linksredes{
+    display: flex;
+    gap: 0 10px;
+  }
+  .whiteLabels a{
+    color: white;
+    opacity: .75;
+    font-size: 1.25rem;
+  }
+  .whiteLabels a:hover{
+    opacity: 1;
+  }
+  .whiteLabels{
+    gap: 0 .75rem;
+  }
+</style>
+<div class:list={["linksredes", className]}>
+<a href="https://wa.link/karandaresort" target="_blank"><span class="bi bi-whatsapp"></span></a>
+<a href="https://www.instagram.com/karandaresort/" target="_blank"><span class="bi bi-instagram"></span></a>
+<a href="https://www.facebook.com/karandaresort" target="_blank"><span class="bi bi-facebook"></span></a>
+<a href="https://www.tiktok.com/@karandaresort" target="_blank"><span class="bi bi-tiktok"></span></a>  
+</div>

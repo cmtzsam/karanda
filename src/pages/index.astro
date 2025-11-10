@@ -14,10 +14,31 @@ import HomeImg7 from '../assets/home-img-7.png'
 import HomeImg8 from '../assets/home-img-8.jpg'
 import HomeImg9 from '../assets/home-img-9.jpg'
 
+import Slideshow from '../components/Slideshow.astro';
+
+
+const homeImage = [
+  {
+    src: '/hero-home.jpg', // Archivo en public/
+    alt: 'Hero',
+    title: 'Enjoy the paradise',
+    width: 1200,
+    height: 800
+  },
+  {
+    src: '/hero-home.jpg', // Archivo en public/
+    alt: 'Hero',
+    title: 'Enjoy the paradise 2',
+    width: 1200,
+    height: 800
+  },
+]
+
 ---
 
 <Layout>
-<HeroBanner />
+
+    <Slideshow images={homeImage} />
 
   <div class="welcomeBlock">
     <div class="container">
@@ -58,7 +79,7 @@ import HomeImg9 from '../assets/home-img-9.jpg'
           Rodeado por la naturaleza que va recorriendo por las costas del océano, el sol dejando caer su luz sobre el agua cristalina de los cenotes y la tranquilidad de la jungla, Karanda el paraíso en un solo lugar donde la paz, la privacidad, el lujo y la naturaleza se encuentran para crear un lugar mágico.
         </p>
         <p class="text-center">
-          Karanda comparte la paz y la elegancia de la naturaleza en la exclusiva Región 15, creamos un espacio en el cual puedes crear, relajarte, divertirte y vivir una experiencia única, todo en un mismo lugar. 
+          Karanda comparte la paz y la elegancia de la naturaleza en la exclusiva Región 15, creamos un espacio en el cual puedes, relajarte, divertirte y vivir una experiencia única, todo en un mismo lugar. 
         </p>
         <p class="d-none">
           Cada detalle ha sido creada para crear una experiencia única dentro de nuestro paraíso, contando con espacios para cualquier actividad. Descubre la magia de Karanda por ti mism@ y adquiere tu departamento/villa en Karanda, Tulum.
@@ -122,7 +143,7 @@ import HomeImg9 from '../assets/home-img-9.jpg'
   <div class="conoceBlock">
     <div class="container">
       <h2>Conoce las <span>Instalaciones</span> de nuestras villas</h2> 
-      <p>Ven a vivir esa experiencia que tanto haz anhelado. Escápate a la aventura, a la diversión, a la vida.</p>
+      <p>Escápate a la aventura, a la diversión... ¡A la vida que mereces!</p>
 
       <div class="row">
         <div class="col col-12 col-md-6 col-lg-4">

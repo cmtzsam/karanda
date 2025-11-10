@@ -4,8 +4,10 @@ import { navLinks } from '../config/data/navigation.js';
 const titleCompany = 'Karanda';
 const currentPath = Astro.url.pathname;
 
+
 // Images
 import logoKaranda from '../assets/logo-karanda.png';
+import Redes from './Redes.astro';
 ---
 
 <!-- Header Start -->
@@ -85,6 +87,14 @@ import logoKaranda from '../assets/logo-karanda.png';
                 }
                 <li class="lastlink" >
                     <a class="text-uppercase" href="#!"><u>Reserva ahora</u></a>
+                </li>
+                <li class="lastlink" >
+                    <div class="followUs d-flex gap-3">
+                        
+                        <Redes />
+                        
+                        
+                    </div>
                 </li>
             </ul>
             <div class="btn-area d-lg-none d-block text-center">

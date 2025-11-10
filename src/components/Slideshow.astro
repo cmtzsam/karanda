@@ -1,0 +1,113 @@
+---
+// Props del componente (sin Image de Astro para imágenes públicas)
+export interface Props {
+  images: Array<{
+    src: string;
+    alt: string;
+    title?: string;
+    width?: number;
+    height?: number;
+  }>;
+  slidesPerView?: number;
+  spaceBetween?: number;
+  loop?: boolean;
+  
+}
+
+const { 
+  images = [],
+  slidesPerView = 1,
+  spaceBetween = 20,
+  loop = true , 
+} = Astro.props;
+
+  /* Importar estilos base de Swiper */
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+  
+  /* Importar estilos de PhotoSwipe */
+import 'photoswipe/style.css';
+---
+
+<style>
+.arrowGallery{
+  color: white;
+}
+.image-container{
+  position: relative;
+}
+.image-container img{
+  position: relative;
+  z-index: 2;
+}
+.image-container h1{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 22;
+  color: white;
+  font-size: 80px;
+}
+@media ( min-width: 1280px ){
+  .image-container h1{
+    font-size: 150px;  
+  }
+}
+@media ( max-width: 560px ){
+  .image-container h1{
+    font-size: 45px;  
+  }
+}
+</style>
+
+<!-- Estructura HTML simplificada -->
+<div class="gallery-container">
+  <div class="swiper" id="gallery-swiper">
+    <div class="swiper-wrapper">
+      {images.map((image, index) => (
+        <div class="swiper-slide">
+          <div class="image-container" >
+            <img 
+              src={image.src}
+              alt={image.alt}
+              loading="lazy"
+              class="gallery-image img-fluid w-100"
+            />
+            <h1>{image.title}</h1>
+          </div>
+        </div>
+      ))}
+    </div>
+    
+    <!-- Navegación -->
+    <div class="swiper-button-next arrowGallery "></div>
+    <div class="swiper-button-prev arrowGallery "></div>
+    
+    <!-- Paginación -->
+    <!-- <div class="swiper-pagination"></div> -->
+  </div>
+</div>
+
+<script>
+  import Swiper from 'swiper';
+  import { Navigation, Pagination, Autoplay, Thumbs } from 'swiper/modules';
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const swiper = new Swiper('#gallery-swiper', {
+      modules: [Navigation, Pagination, Autoplay, Thumbs],
+      loop: true,
+      slidesPerView: 1,
+      spaceBetween: 20,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  });
+</script>

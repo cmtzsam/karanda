@@ -1,7 +1,7 @@
 ---
+import Redes from "./Redes.astro"
 
 ---
-
 <footer class="footerPage enquery-section style-2">
   <div class="container">
     <div class="footerPage--top">
@@ -9,10 +9,8 @@
         <!-- Informacion -->
         <div class="col-12 col-lg-5 d-flex align-items-center">
           <div class="map-area w-100">
-            <div class="followUs d-flex gap-2">
-              <a href="#!" class="text-white opacity-75 fs-5" ><i class="bi bi-facebook"></i></a>
-              <a href="#!" class="text-white opacity-75 fs-5" ><i class="bi bi-tiktok"></i></a>
-              <a href="#!" class="text-white opacity-75 fs-5" ><i class="bi bi-instagram"></i></a>
+            <div class=" d-flex gap-2" id="followBlock">
+              <Redes class="whiteLabels" />              
             </div>
             <p class="pt-2 pb-4">
               <a class="text-white fs-4 opacity-75" href="#!">Tel.  98 4187 6849</a>
@@ -36,9 +34,7 @@
               <span class="d-block">Te esperamos</span>
             </h2>
             <p class="py-3">
-              No lo pienses más, KARANDA te está esperando. Ven a vivir esa
-              experiencia que tanto haz anhelado. Escápate a la aventura, a la
-              diversión, a la vida.
+              No lo pienses más, KARANDA te está esperando. 
             </p>
             <div class="enquery-form-wrapper">
               <form>

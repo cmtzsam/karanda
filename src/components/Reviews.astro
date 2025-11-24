@@ -1,0 +1,86 @@
+---
+export interface Props {
+  resenas: Array<{
+    nombre: string;
+    ciudad?: string;
+    review?: string;
+    enlace_airbnb?: string;
+    enlace_booking?: string;
+  }>;
+  slidesPerView?: number;
+  spaceBetween?: number;
+  loop?: boolean;
+}
+
+const { 
+  resenas = [],
+  slidesPerView = 1,
+  spaceBetween = 20,
+  loop = true , 
+} = Astro.props;
+
+import IconAirbnb from '../assets/ico-airbnb.png'
+import IconBooking from '../assets/ico-booking.png'
+
+/* Importar estilos base de Swiper */
+import 'swiper/css';
+import 'swiper/css/pagination';
+
+---
+<style>
+  .reviewsBlock--reviews-item{
+    width: 100%;
+    max-width: 90%;
+    margin: 100px auto 0;
+  }
+</style>
+
+<div class="swiper" id="reviews-swiper">
+  <div class="swiper-wrapper">
+  {resenas.map((resena, index) => (
+    <div class="swiper-slide">
+      <div class="reviewsBlock--reviews-item">
+        <div class="reviewsBlock--reviews-item-who">
+          <i class="bi bi-person-circle"></i>
+        </div>
+        <div class="reviewsBlock--reviews-item-copy">
+          <h3>{resena.nombre}</h3>
+          <h4>{resena.ciudad}</h4>
+          <p>
+            {resena.review}
+          </p>
+          <a href={resena.enlace_airbnb} style="color: white;">https://www.airbnb.mx/</a>
+        </div>
+        <div class="imageBlock--btns pt-3">
+          <div class="container text-end d-flex justify-content-end gap-2 pb-5">
+            <a href={resena.enlace_airbnb} class="btn btn-circle btn-airbnb rounded-circle d-flex align-items-center justify-content-center text-align-center">
+              <img src={IconAirbnb.src} alt="Airbnb" class="d-block w-100">
+            </a>
+            <a href={resena.enlace_booking} class="btn btn-circle btn-booking rounded-circle d-flex align-items-center justify-content-center text-align-center">
+              <img src={IconBooking.src} alt="Booking" class="d-block w-100">
+            </a>
+          </div>
+        </div>                
+      </div>
+    </div>
+  ))}
+  </div>
+</div>
+
+
+</div>
+
+
+<script>
+  import Swiper from 'swiper';
+  import { Navigation, Pagination, Autoplay, Thumbs } from 'swiper/modules';
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const swiper = new Swiper('#reviews-swiper', {
+      modules: [Pagination, Autoplay],
+      loop: true,
+      slidesPerView: 1,
+      spaceBetween: 20,
+    });
+  });
+</script>

@@ -2,10 +2,49 @@
 import Layout from "../layouts/Layout.astro"
 
 import HomeImg2 from '../assets/home-img-2.png'
-import IconAirbnb from '../assets/ico-airbnb.png'
-import IconBooking from '../assets/ico-booking.png'
+
 
 import HeroResenas from '../assets/hero-resenas.jpg';
+
+import Reviews from "../components/Reviews.astro";
+
+const resenas = [
+  {
+    id: 1,
+    nombre: "Antonio",
+    fecha: "marzo de 2025",
+    calificacion: 5,
+    review: "La casa es más bonita que las fotos, cómoda, colchones cómodos, limpieza impecable, cocina completa, nos ayudaron con la decoración y pastel que está delicioso. Las amenidades están muy bien y el área común es grande y cómodo. El anfitrión siempre estuvo atento de nuestras necesidades y contestaba rápido. Totalmente recomendable, gracias por todo.",
+  },
+  {
+    id: 2,
+    nombre: "Jas",
+    fecha: "abril de 2025",
+    calificacion: 5,
+    review: "Así que acabo de llegar a casa de mi viaje de cumpleaños a Tulum y mis amigos y yo planeamos hacer de esta una estancia anual en el futuro. Nos encantó todo. La villa es exactamente igual que las fotos, hermosa, espaciosa y lujosa. ¡Sus chefs recomendados fueron EXCELENTES! Siempre elegiré esta villa en lugar de cualquier centro vacacional en Tulum. Gracias por hacer que mi viaje de cumpleaños sea increíble.",
+  },
+  {
+    id: 3,
+    nombre: "Shannon",
+    fecha: "marzo de 2023",
+    calificacion: 5,
+    review: "¡Tuve una estancia increíble aquí! ¡Salí para mi despedida de soltera y estábamos tan agradecidos por el servicio de conserjería! ¡Fueron muy amables coordinando todo nuestro transporte durante el fin de semana! ¡La casa era hermosa! ¡Y nos encantó tener 2 piscinas separadas para poder pasar el rato en espacios diferentes cada día! En general, la casa fue increíble y definitivamente fue lo que esperábamos.",
+  },
+  {
+    id: 4,
+    nombre: "Marise",
+    fecha: "septiembre de 2024",
+    calificacion: 5,
+    review: "¡Dios mío! Literalmente nos colocaron la alfombra roja. ¡Desde la reservación hasta el último día! Cada persona con la que hablé era muy clara y comprensiva sobre cualquier cosa que necesitáramos/queríamos. Pudimos conseguir un chef, un conductor, servicio de limpieza y cualquier recomendación de comida que queríamos. ¡Realmente me gustaría agradecer a cada persona que ayudó a mi viaje de cumpleaños número 30 a pasar un buen rato! Lo único era que la conexión wifi no estaba allí más fuerte en las habitaciones, pero todos íbamos a la zona común para tener la mejor conexión. Entendemos que Tulum se está construyendo y mejorando cada día, así que tengo muchas ganas de ver la propiedad en un par de años. ¡Qué maravilla la pasamos! ¡Agradecemos a todos! ¡Seguro que volvería !",
+  },
+  {
+    id: 5,
+    nombre: "Filip",
+    fecha: "marzo de 2025",
+    calificacion: 5,
+    review: "Gran villa moderna y limpia. Muy acogedor y te sientes como en casa. Las instalaciones fueron geniales y ofrecen muchas oportunidades para relajarse.",
+  }
+];
 
 ---
 
@@ -28,29 +67,8 @@ import HeroResenas from '../assets/hero-resenas.jpg';
         </div>
         <div class="reviewsBlock--reviews">
           <div class="reviewsBlock--reviews-items mt-5">
-            <div class="reviewsBlock--reviews-item">
-              <div class="reviewsBlock--reviews-item-who">
-                <i class="bi bi-person-circle"></i>
-              </div>
-              <div class="reviewsBlock--reviews-item-copy">
-                <h3>Wayneisha</h3>
-                <h4>Nueva Orleans, Luisiana</h4>
-                <p>¡Nos quedamos para un viaje de despedida de soltera! Fueron un total de 6 chicas y todas estábamos muy cómodas. El personal fue muy receptivo a todas nuestras necesidades y el servicio de limpieza venía todos los días. ¡Utilizamos las piscinas casi todos los días y compramos conserjería para aperitivos y bebidas! ¡Fue una buena experiencia!</p>
-                <a href="#!">https://www.airbnb.mx/</a>
-              </div>
-              <div class="imageBlock--btns pt-3">
-                <div class="container text-end d-flex justify-content-end gap-2 pb-5">
-                  <a href="#!" class="btn btn-circle btn-airbnb rounded-circle d-flex align-items-center justify-content-center text-align-center">
-                    <img src={IconAirbnb.src} alt="Airbnb" class="d-block w-100">
-                  </a>
-                  <a href="#!" class="btn btn-circle btn-booking rounded-circle d-flex align-items-center justify-content-center text-align-center">
-                    <img src={IconBooking.src} alt="Booking" class="d-block w-100">
-                  </a>
-                </div>
-              </div>                
-            </div>
+            <Reviews resenas={resenas} />
           </div>
-
         </div>
       </div>
     </div>

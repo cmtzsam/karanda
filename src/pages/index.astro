@@ -14,6 +14,12 @@ import HomeImg7 from '../assets/home-img-7.png'
 import HomeImg8 from '../assets/home-img-8.jpg'
 import HomeImg9 from '../assets/home-img-9.jpg'
 
+
+import AmenidadesImg4 from '../assets/amenidades-4.jpg';
+import AmenidadesImg5 from '../assets/amenidades-5.jpg';
+import AmenidadesImg6 from '../assets/amenidades-6.jpg';
+import AmenidadesImg7 from '../assets/amenidades-7.jpg';
+
 import Slideshow from '../components/Slideshow.astro';
 
 import Reviews from "../components/Reviews.astro";
@@ -27,9 +33,30 @@ const homeImage = [
     height: 800
   },
   {
-    src: '/hero-home.jpg', // Archivo en public/
+    src: AmenidadesImg4.src, // Archivo en public/
     alt: 'Hero',
-    title: 'Enjoy the paradise 2',
+    title: 'Enjoy the paradise',
+    width: 1200,
+    height: 800
+  },
+  {
+    src: AmenidadesImg5.src, // Archivo en public/
+    alt: 'Hero',
+    title: 'Enjoy the paradise',
+    width: 1200,
+    height: 800
+  },
+  {
+    src: AmenidadesImg6.src, // Archivo en public/
+    alt: 'Hero',
+    title: 'Enjoy the paradise',
+    width: 1200,
+    height: 800
+  },
+  {
+    src: AmenidadesImg7.src, // Archivo en public/
+    alt: 'Hero',
+    title: 'Enjoy the paradise',
     width: 1200,
     height: 800
   },
@@ -234,8 +261,8 @@ const resenas = [
 
   <div class="reviewsBlock">
     <div class="container-fluid">
-      <div class="reviewsBlock--img">
-        <img src={HomeImg9.src} alt="" class="img-fluid d-block">
+      <div class="reviewsBlock--img d-flex">
+        <img src={HomeImg9.src} alt="" class="img-fluid d-block" style="object-fit: none;">
       </div>
       <div class="reviewsBlock--reviews">
         <h2>Reseñas <span>Villas</span></h2>

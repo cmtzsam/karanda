@@ -16,7 +16,7 @@ export const navLinks = [
     href: "/departamentos",
   },
   {
-    text: "Resenas",
+    text: "Reseñas",
     href: "/resenas",
   },
   {

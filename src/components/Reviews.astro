@@ -30,7 +30,7 @@ import 'swiper/css/pagination';
 <style>
   .reviewsBlock--reviews-item{
     width: 100%;
-    max-width: 90%;
+    max-width: 480px;
     margin: 100px auto 0;
   }
 </style>
@@ -65,6 +65,7 @@ import 'swiper/css/pagination';
     </div>
   ))}
   </div>
+  <div class="swiper-pagination swiper-pagination-reviews"></div> 
 </div>
 
 
@@ -77,10 +78,14 @@ import 'swiper/css/pagination';
 
   document.addEventListener('DOMContentLoaded', () => {
     const swiper = new Swiper('#reviews-swiper', {
-      modules: [Pagination, Autoplay],
+      modules: [Pagination, Autoplay, Pagination],
       loop: true,
       slidesPerView: 1,
       spaceBetween: 20,
+      pagination: {
+        el: '.swiper-pagination-reviews',
+        clickable: true,
+      },      
     });
   });
 </script>

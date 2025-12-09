@@ -3,12 +3,19 @@
 
 #mainHeader
   &.sticky
-    .main-menu ul li a
+    .main-menu ul li:not(.lastlink) a
       @media ( min-width: 992px )
-        color: var(--azul)!important
+      color: var(--azul)!important
     .menu-list
+      padding-top: 5px
+      padding-bottom: 5px
       .lastlink
-        display: inline-block        
+        display: inline-block
+        &.btnbg
+          background-color: var(--azul)
+          a
+            u
+              text-decoration: none
   .main-menu
     @media ( max-width: 991px )
       background-color: var(--azul)
@@ -378,11 +385,11 @@
         @include maxMobile
           padding: 25px
         h3, h4, a
-          color: var(--gris)
+          color: var(--blanco)
         h3, h4
           font-size: 1rem
         p
-          color: var(--celeste)
+          color: var(--blanco)
           padding: 15px 0
           margin: 0
           font-size: 17px
@@ -407,6 +414,10 @@
 
 .masInformacionSection
   padding: 50px 0
+  &.blueTheme
+    background-color: var(--azul)
+    h3, h4, p
+      color: var(--blanco)
   h2
     margin-bottom: 25px
   h3, h4, p

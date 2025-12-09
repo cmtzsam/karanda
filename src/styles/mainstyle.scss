@@ -48,8 +48,5 @@ body{
   color: var(--negro)
 }
 p{
-  font-size: 18px;
-  @include maxMobile{
-    font-size: 15px;
-  }
+  font-size: 15px;
 }

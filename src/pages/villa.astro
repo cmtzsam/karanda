@@ -52,31 +52,31 @@ const galleryImages = [
 const resenas = [
   {
     id: 1,
+    nombre: "Marise",
+    fecha: "septiembre de 2024",
+    calificacion: 5,
+    review: "¡Dios mío! Literalmente nos colocaron la alfombra roja. ¡Desde la reservación hasta el último día! Cada persona con la que hablé era muy clara y comprensiva sobre cualquier cosa que necesitáramos/queríamos. Pudimos conseguir un chef, un conductor, servicio de limpieza y cualquier recomendación de comida que queríamos. ¡Realmente me gustaría agradecer a cada persona que ayudó a mi viaje de cumpleaños número 30 a pasar un buen rato! Lo único era que la conexión wifi no estaba allí más fuerte en las habitaciones, pero todos íbamos a la zona común para tener la mejor conexión. Entendemos que Tulum se está construyendo y mejorando cada día, así que tengo muchas ganas de ver la propiedad en un par de años. ¡Qué maravilla la pasamos! ¡Agradecemos a todos! ¡Seguro que volvería !",
+  },  
+  {
+    id: 2,
     nombre: "Antonio",
     fecha: "marzo de 2025",
     calificacion: 5,
     review: "La casa es más bonita que las fotos, cómoda, colchones cómodos, limpieza impecable, cocina completa, nos ayudaron con la decoración y pastel que está delicioso. Las amenidades están muy bien y el área común es grande y cómodo. El anfitrión siempre estuvo atento de nuestras necesidades y contestaba rápido. Totalmente recomendable, gracias por todo.",
   },
   {
-    id: 2,
+    id: 3,
     nombre: "Jas",
     fecha: "abril de 2025",
     calificacion: 5,
     review: "Así que acabo de llegar a casa de mi viaje de cumpleaños a Tulum y mis amigos y yo planeamos hacer de esta una estancia anual en el futuro. Nos encantó todo. La villa es exactamente igual que las fotos, hermosa, espaciosa y lujosa. ¡Sus chefs recomendados fueron EXCELENTES! Siempre elegiré esta villa en lugar de cualquier centro vacacional en Tulum. Gracias por hacer que mi viaje de cumpleaños sea increíble.",
   },
   {
-    id: 3,
+    id: 4,
     nombre: "Shannon",
     fecha: "marzo de 2023",
     calificacion: 5,
     review: "¡Tuve una estancia increíble aquí! ¡Salí para mi despedida de soltera y estábamos tan agradecidos por el servicio de conserjería! ¡Fueron muy amables coordinando todo nuestro transporte durante el fin de semana! ¡La casa era hermosa! ¡Y nos encantó tener 2 piscinas separadas para poder pasar el rato en espacios diferentes cada día! En general, la casa fue increíble y definitivamente fue lo que esperábamos.",
-  },
-  {
-    id: 4,
-    nombre: "Marise",
-    fecha: "septiembre de 2024",
-    calificacion: 5,
-    review: "¡Dios mío! Literalmente nos colocaron la alfombra roja. ¡Desde la reservación hasta el último día! Cada persona con la que hablé era muy clara y comprensiva sobre cualquier cosa que necesitáramos/queríamos. Pudimos conseguir un chef, un conductor, servicio de limpieza y cualquier recomendación de comida que queríamos. ¡Realmente me gustaría agradecer a cada persona que ayudó a mi viaje de cumpleaños número 30 a pasar un buen rato! Lo único era que la conexión wifi no estaba allí más fuerte en las habitaciones, pero todos íbamos a la zona común para tener la mejor conexión. Entendemos que Tulum se está construyendo y mejorando cada día, así que tengo muchas ganas de ver la propiedad en un par de años. ¡Qué maravilla la pasamos! ¡Agradecemos a todos! ¡Seguro que volvería !",
   },
   {
     id: 5,
@@ -131,6 +131,50 @@ import '../styles/_aditional.sass';
             </div>
             <!-- Buttons product -->
           </div>
+
+
+          <!-- Mas informacion -->
+          <section class="masInformacionSection">
+            <div class="masInformacionSection--copy pb-5">
+              <div class="masInformacionSection--copy-title">
+                <div class="ico">
+                  <img src={villaIco1.src} alt="" />
+                </div>
+                <div class="titulo">
+                  <h3>El alojamiento</h3>
+                  <h4>Dormitorios:</h4>
+                </div>
+              </div>
+              <div class="masInformacionSection--copy-desc">
+                <p><strong>4</strong> Amplios dormitorios:</p>
+                <p><strong>3</strong> Dormitorios con camas tamaño King + camas individuales extraíbles.</p>
+                <p><strong>1</strong>  dormitorio con <strong>2</strong> camas tamaño queen.</p>
+                <p><strong>4</strong> baños completos.</p>
+                <p>Cocina Equipada</p>
+                <p>Comedor</p>
+                <p>Sala integrada</p>
+                <p>Terraza Equipada</p>
+                <p>WiFi</p>
+                <!-- <br>
+                <p><i>Todas las habitaciones incluyen:</i></p>
+                <p>Armarios integrados.</p>
+                <p>Televisores inteligentes.</p>
+                <p>Aire acondicionado.</p>
+                <br>
+                
+                <p>Cocina totalmente equipada con todo lo necesario para cocinar en casa.</p>
+                <p>Comedor interior y sala de estar frente a la piscina, creando una hermosa conexión interior-exterior.</p>
+                <p>La sala de estar incluye un televisor inteligente y un sistema de sonido, perfecto para relajarse por la noche.</p>
+                <br>
+                <p>- Dos piscinas privadas: una en la planta baja y otra en la azotea.</p>
+                <p>- Terraza con parrilla para barbacoa, tumbonas y comedor.</p>
+                <p>- Wifi de alta velocidad en toda la villa.</p> -->
+
+              </div>
+            </div>
+          </section>
+          <!-- Mas informacion -->
+
         </div>
         <!-- End gallery -->
 
@@ -149,20 +193,7 @@ import '../styles/_aditional.sass';
                 </div>
               </div>
             </div>
-            <div class="reviewsBlock--reviews-items px-0 pt-5">
-              <Reviews resenas={resenas} />
-            </div>
-            <!-- <div class="reviewsBlock--reviews-items px-0 pt-5">
-              <div class="reviewsBlock--reviews-item alternativeColor">
-                <div class="reviewsBlock--reviews-item-who">
-                  <i class="bi bi-person-circle"></i>
-                </div>
-                <div class="reviewsBlock--reviews-item-copy">
-                  <h3>GARRET, LOS ÁNGELES</h3>
-                  <p>La villa estaba muy limpia. La ubicación estaba lo suficientemente cerca como para llegar a nuestros destinos en un momento muy razonable. El servicio de conserjería fue extremadamente servicial y absolutamente necesario. El aire acondicionado funcionó bien.</p>
-                </div>
-              </div>
-            </div> -->
+            
             <p class="text-end pt-4">
               <a href="#!" class="btn-warning rounded-pill d-inline-flex align-items-center justify-content-center text-align-center py-3 text-white" style="width: 100%; max-width: 200px;">RESERVA AQUÍ</a> 
             </p>           
@@ -175,112 +206,7 @@ import '../styles/_aditional.sass';
   <!-- Product info -->
 
 
-  <!-- Mas informacion -->
-  <section class="masInformacionSection">
-    <div class="container">
 
-      <h2>Más información</h2>
-
-      <div class="row">
-
-        <div class="col col-12 col-lg-6">
-          <div class="masInformacionSection--copy pb-5">
-            <div class="masInformacionSection--copy-title">
-              <div class="ico">
-                <img src={villaIco1.src} alt="" />
-              </div>
-              <div class="titulo">
-                <h3>El alojamiento</h3>
-                <h4>Dormitorios:</h4>
-              </div>
-            </div>
-            <div class="masInformacionSection--copy-desc">
-              <p><strong>4</strong> Amplios dormitorios:</p>
-              <p><strong>3</strong> Dormitorios con camas tamaño King + camas individuales extraíbles.</p>
-              <p><strong>1</strong>  dormitorio con <strong>2</strong> camas tamaño queen.</p>
-              <p><strong>4</strong> baños completos.</p>
-              <p>Cocina Equipada</p>
-              <p>Comedor</p>
-              <p>Sala integrada</p>
-              <p>Terraza Equipada</p>
-              <p>WiFi</p>
-              <!-- <br>
-              <p><i>Todas las habitaciones incluyen:</i></p>
-              <p>Armarios integrados.</p>
-              <p>Televisores inteligentes.</p>
-              <p>Aire acondicionado.</p>
-              <br>
-              
-              <p>Cocina totalmente equipada con todo lo necesario para cocinar en casa.</p>
-              <p>Comedor interior y sala de estar frente a la piscina, creando una hermosa conexión interior-exterior.</p>
-              <p>La sala de estar incluye un televisor inteligente y un sistema de sonido, perfecto para relajarse por la noche.</p>
-              <br>
-              <p>- Dos piscinas privadas: una en la planta baja y otra en la azotea.</p>
-              <p>- Terraza con parrilla para barbacoa, tumbonas y comedor.</p>
-              <p>- Wifi de alta velocidad en toda la villa.</p> -->
-
-            </div>
-          </div>
-          <div class="masInformacionSection--copy pb-5">
-            <div class="masInformacionSection--copy-title">
-              <div class="ico">
-                <img src={villaIco2.src} alt="" />
-              </div>
-              <div class="titulo">
-                <h3>SERVICIOS PRIVADOS</h3>
-              </div>
-            </div>
-            <div class="masInformacionSection--copy-desc">
-              <p>Servicio de Chef</p>
-              <p>Servicio de Transporte</p>
-              <p>Servicio de Mixología</p>
-            </div>
-          </div>
-        </div>
-        <div class="col col-12 col-lg-6">
-          <div class="masInformacionSection--copy pb-5">
-            <div class="masInformacionSection--copy-title">
-              <div class="ico">
-                <img src={villaIco3.src} alt="" />
-              </div>
-              <div class="titulo">
-                <h3>AMENIDADES</h3>
-              </div>
-            </div>
-            <div class="masInformacionSection--copy-desc">
-              <p>Piscina Semiolímpica</p>
-              <p>Cancha de Pádel</p>
-              <p>Gym</p>
-              <p>Zona de Yoga</p>
-              <p>Área de Hamacas</p>
-              <p>Camas Balinesas</p>
-            </div>
-          </div>
-          <div class="masInformacionSection--copy pb-5">
-            <div class="masInformacionSection--copy-title">
-              <div class="ico">
-                <img src={villaIco4.src} alt="" />
-              </div>
-              <div class="titulo">
-                <h3>EXPERIENCIA DEL HÚESPED</h3>
-              </div>
-            </div>
-            <div class="masInformacionSection--copy-desc">
-              <p>Nuestro equipo dedicado a la experiencia del huésped te ayudará a planificar un viaje a tu medida:</p>
-              <p>Cenas privadas en la villa.</p>
-              <p>Servicios de spa.</p>
-              <p>Cenote y paseos en barco.</p>
-              <p>Reservaciones en restaurantes, reservaciones en clubes de playa y mucho más.</p>
-              <p>Planificación previa a la llegada disponible para garantizar que todo esté listo antes de que aterrices.</p>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-  <!-- Mas informacion -->
 
 
   <div class="imageBlock ">

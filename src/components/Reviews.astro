@@ -22,12 +22,16 @@ const {
 import IconAirbnb from '../assets/ico-airbnb.png'
 import IconBooking from '../assets/ico-booking.png'
 
-/* Importar estilos base de Swiper */
 import 'swiper/css';
 import 'swiper/css/pagination';
-
+import 'swiper/css/navigation';
 ---
+
 <style>
+  #reviews-swiper .swiper-button-prev, 
+  #reviews-swiper .swiper-button-next{
+    color: var(--naranja);
+  }
   .reviewsBlock--reviews-item{
     width: 100%;
     max-width: 480px;
@@ -65,27 +69,30 @@ import 'swiper/css/pagination';
     </div>
   ))}
   </div>
-  <div class="swiper-pagination swiper-pagination-reviews"></div> 
+  <div class="swiper-pagination swiper-pagination-reviews"></div>
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
 </div>
-
-
-</div>
-
 
 <script>
   import Swiper from 'swiper';
-  import { Navigation, Pagination, Autoplay, Thumbs } from 'swiper/modules';
+  import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 
   document.addEventListener('DOMContentLoaded', () => {
     const swiper = new Swiper('#reviews-swiper', {
-      modules: [Pagination, Autoplay, Pagination],
+      modules: [Navigation, Pagination, Autoplay],
       loop: true,
       slidesPerView: 1,
+      autoHeight: true,
       spaceBetween: 20,
       pagination: {
         el: '.swiper-pagination-reviews',
         clickable: true,
-      },      
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
     });
   });
 </script>

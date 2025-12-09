@@ -1,0 +1,204 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+import Departamentos1 from '../assets/departamentos-1.jpg';
+import Departamentos2 from '../assets/departamentos-2.jpg';
+
+import IconAirbnb from '../assets/ico-airbnb.png'
+import IconBooking from '../assets/ico-booking.png'
+
+import HeroResenas from '../assets/hero-resenas.jpg';
+import GalleryDepartamentos from '../components/GalleryDepartamentos.astro';
+import GalleryDepartamentos2 from '../components/GalleryDepartamentos2.astro';
+import villaIco1 from '../assets/villa-ico-1.png';
+import villaIco2 from '../assets/villa-ico-2.png';
+import villaIco3 from '../assets/villa-ico-3.png';
+import villaIco4 from '../assets/villa-ico-4.png';
+
+const galleryImages = [
+  {
+    src: '/villa3-1.jpg', // Archivo en public/
+    alt: 'Villa 3 - 1',
+    title: 'Villa 3',
+    width: 1200,
+    height: 800
+  },
+  {
+    src: '/villa3-2.jpg', // Archivo en public/
+    alt: 'Villa 3 - 2',
+    title: 'Villa 3',
+    width: 1200,
+    height: 800
+  },
+  {
+    src: '/villa3-3.jpg', // Archivo en public/
+    alt: 'Villa 3 - 3',
+    title: 'Villa 3',
+    width: 1200,
+    height: 800
+  },
+  {
+    src: '/villa3-4.jpg', // Archivo en public/
+    alt: 'Villa 3 - 4',
+    title: 'Villa 3',
+    width: 1200,
+    height: 800
+  },
+];
+const galleryImagesDpto2 = [
+  {
+    src: '/departamento-2-3.jpg', // Archivo en public/
+    alt: 'Villa 3 - 1',
+    title: 'Villa 3',
+    width: 1200,
+    height: 800
+  },  
+  {
+    src: '/departamento-2-1.jpg', // Archivo en public/
+    alt: 'Villa 3 - 1',
+    title: 'Villa 3',
+    width: 1200,
+    height: 800
+  },
+  {
+    src: '/departamento-2-2.jpg', // Archivo en public/
+    alt: 'Villa 3 - 1',
+    title: 'Villa 3',
+    width: 1200,
+    height: 800
+  },
+
+  {
+    src: '/departamento-2-4.jpg', // Archivo en public/
+    alt: 'Villa 3 - 1',
+    title: 'Villa 3',
+    width: 1200,
+    height: 800
+  },
+  {
+    src: '/departamento-2-5.jpg', // Archivo en public/
+    alt: 'Villa 3 - 1',
+    title: 'Villa 3',
+    width: 1200,
+    height: 800
+  },
+  {
+    src: '/departamento-2-6.jpg', // Archivo en public/
+    alt: 'Villa 3 - 1',
+    title: 'Villa 3',
+    width: 1200,
+    height: 800
+  },
+  {
+    src: '/departamento-2-7.jpg', // Archivo en public/
+    alt: 'Villa 3 - 1',
+    title: 'Villa 3',
+    width: 1200,
+    height: 800
+  },
+  {
+    src: '/departamento-2-8.jpg', // Archivo en public/
+    alt: 'Villa 3 - 1',
+    title: 'Villa 3',
+    width: 1200,
+    height: 800
+  },
+  {
+    src: '/departamento-2-9.jpg', // Archivo en public/
+    alt: 'Villa 3 - 1',
+    title: 'Villa 3',
+    width: 1200,
+    height: 800
+  },
+];
+---
+<Layout>
+  <section class="heroBanner homePageBanner mb-0" 
+    style=`background-image: url(${HeroResenas.src});`
+  >
+    <div class="heroBanner--inf align-items-end">
+      <div class="container">
+        <h1 class="text-start pb-4">Villas</h1>
+      </div>
+    </div>
+  </section> 
+  
+  
+
+  <div class="welcomeBlock mt-5 pt-5 pb-5">
+    <div class="container pt-4 pb-3">
+      <div class="welcomeBlock--copy-large mw-100">
+        <h2 class="text-center">
+          VILLAS
+        </h2>
+        <p class="text-center mw-100 w-100">
+          Las villas ofrecen una amplia variedad de características excepcionales pensadas para satisfacer todas tus necesidades. Disfruta del servicio de concierge personalizado, amplias piscinas y una exclusiva cancha de pádel en la azotea.
+        </p>
+        <p class="text-center mw-100 w-100">
+          Cada espacio ha sido diseñado para brindar experiencias memorables, combinando confort, elegancia y un servicio al cliente de primer nivel.
+        </p>
+      </div>
+    </div>
+  </div>  
+  <div class="imageBlock">
+    <!-- <img src={Departamentos1.src} alt="" class="d-block mx-auto w-100"> -->
+    
+    <GalleryDepartamentos 
+      images={galleryImages}
+      imagesThumbs={galleryImages}
+    />
+
+    
+    <!-- Mas informacion -->
+    <section class="masInformacionSection">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-12 col-md-6 col-lg-6">
+            <div class="masInformacionSection--copy pb-5">
+              <div class="masInformacionSection--copy-title">
+                <div class="ico">
+                  <img src={villaIco1.src} alt="" />
+                </div>
+                <div class="titulo">
+                  <h3>El alojamiento</h3>
+                  <h4>Dormitorios:</h4>
+                </div>
+              </div>
+              <div class="masInformacionSection--copy-desc">
+                <p><strong>4</strong> Amplios dormitorios:</p>
+                <p><strong>3</strong> Dormitorios con camas tamaño King + camas individuales extraíbles.</p>
+                <p><strong>1</strong>  dormitorio con <strong>2</strong> camas tamaño queen.</p>
+                <p><strong>4</strong> baños completos.</p>
+                <p>Cocina Equipada</p>
+                <p>Comedor</p>
+                <p>Sala integrada</p>
+                <p>Terraza Equipada</p>
+                <p>WiFi</p>
+              </div>
+            </div>            
+          </div>
+          <div class="col-12 col-md-6 col-lg-6">
+            <div class="imageBlock--btns py-5">
+              <div class="text-end d-flex justify-content-end gap-2 pb-5">
+                <a href="#!" class="btn btn-circle btn-airbnb rounded-circle d-flex align-items-center justify-content-center text-align-center">
+                  <img src={IconAirbnb.src} alt="Airbnb" class="d-block w-100">
+                </a>
+                <a href="#!" class="btn btn-circle btn-booking rounded-circle d-flex align-items-center justify-content-center text-align-center">
+                  <img src={IconBooking.src} alt="Booking" class="d-block w-100">
+                </a>
+                <a href="#!" class="btn btn-warning rounded-pill text-white px-4 py-2 d-flex align-items-center">RESERVA AQUÍ</a>        
+              </div>
+            </div>            
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <!-- Mas informacion -->
+
+
+  </div>
+
+  
+</Layout>

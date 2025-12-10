@@ -10,37 +10,120 @@ import IconBooking from '../assets/ico-booking.png'
 import HeroResenas from '../assets/hero-resenas.jpg';
 import GalleryDepartamentos from '../components/GalleryDepartamentos.astro';
 import GalleryDepartamentos2 from '../components/GalleryDepartamentos2.astro';
-import villaIco1 from '../assets/villa-ico-1.png';
+
 import villaIco2 from '../assets/villa-ico-2.png';
 import villaIco3 from '../assets/villa-ico-3.png';
 import villaIco4 from '../assets/villa-ico-4.png';
+import villaIco1 from '../assets/villa-ico-1-black.png';
+import villabanera from '../assets/banera.png';
+import villacocina from '../assets/cocina.png';
+import villacomedor from '../assets/comedor.png';
+import villasala from '../assets/sala.png';
+import villabalcon from '../assets/balcon.png';
 
 const galleryImages = [
   {
-    src: '/villa3-1.jpg', // Archivo en public/
-    alt: 'Villa 3 - 1',
-    title: 'Villa 3',
+    src: '/villanw-1.jpeg', // Archivo en public/
+    alt: 'Villa',
+    title: 'Villa',
     width: 1200,
     height: 800
   },
   {
-    src: '/villa3-2.jpg', // Archivo en public/
-    alt: 'Villa 3 - 2',
-    title: 'Villa 3',
+    src: '/villanw-2.jpg', // Archivo en public/
+    alt: 'Villa',
+    title: 'Villa',
     width: 1200,
     height: 800
   },
   {
-    src: '/villa3-3.jpg', // Archivo en public/
-    alt: 'Villa 3 - 3',
-    title: 'Villa 3',
+    src: '/villanw-3.jpeg', // Archivo en public/
+    alt: 'Villa',
+    title: 'Villa',
     width: 1200,
     height: 800
   },
   {
-    src: '/villa3-4.jpg', // Archivo en public/
-    alt: 'Villa 3 - 4',
-    title: 'Villa 3',
+    src: '/villanw-4.jpeg', // Archivo en public/
+    alt: 'Villa',
+    title: 'Villa',
+    width: 1200,
+    height: 800
+  },
+  {
+    src: '/villanw-5.jpeg', // Archivo en public/
+    alt: 'Villa',
+    title: 'Villa',
+    width: 1200,
+    height: 800
+  },
+  {
+    src: '/villanw-6.jpeg', // Archivo en public/
+    alt: 'Villa',
+    title: 'Villa',
+    width: 1200,
+    height: 800
+  },
+  {
+    src: '/villanw-7.jpeg', // Archivo en public/
+    alt: 'Villa',
+    title: 'Villa',
+    width: 1200,
+    height: 800
+  },
+  {
+    src: '/villanw-8.jpeg', // Archivo en public/
+    alt: 'Villa',
+    title: 'Villa',
+    width: 1200,
+    height: 800
+  },
+  {
+    src: '/villanw-9.jpeg', // Archivo en public/
+    alt: 'Villa',
+    title: 'Villa',
+    width: 1200,
+    height: 800
+  },
+  {
+    src: '/villanw-10.jpeg', // Archivo en public/
+    alt: 'Villa',
+    title: 'Villa',
+    width: 1200,
+    height: 800
+  },
+  {
+    src: '/villanw-11.jpeg', // Archivo en public/
+    alt: 'Villa',
+    title: 'Villa',
+    width: 1200,
+    height: 800
+  },
+  {
+    src: '/villanw-12.jpeg', // Archivo en public/
+    alt: 'Villa',
+    title: 'Villa',
+    width: 1200,
+    height: 800
+  },
+  {
+    src: '/villanw-13.jpeg', // Archivo en public/
+    alt: 'Villa',
+    title: 'Villa',
+    width: 1200,
+    height: 800
+  },
+  {
+    src: '/villanw-14.jpeg', // Archivo en public/
+    alt: 'Villa',
+    title: 'Villa',
+    width: 1200,
+    height: 800
+  },
+  {
+    src: '/villanw-15.jpeg', // Archivo en public/
+    alt: 'Villa',
+    title: 'Villa',
     width: 1200,
     height: 800
   },
@@ -112,6 +195,21 @@ const galleryImagesDpto2 = [
   },
 ];
 ---
+
+<style>
+  .masInformacionSection--copy{
+    width: 100%;
+    max-width: 250px;
+  }
+  .masInformacionSection--copy-title .ico img{
+    max-width: 80px;
+  }
+  .masInformacionSection--copy-title .titulo h4{
+    font-style: unset;
+    font-size: 16px;
+  }
+</style>
+
 <Layout>
   <section class="heroBanner homePageBanner mb-0" 
     style=`background-image: url(${HeroResenas.src});`
@@ -154,31 +252,88 @@ const galleryImagesDpto2 = [
       <div class="container">
 
         <div class="row">
-          <div class="col-12 col-md-6 col-lg-6">
-            <div class="masInformacionSection--copy pb-5">
-              <div class="masInformacionSection--copy-title">
-                <div class="ico">
-                  <img src={villaIco1.src} alt="" />
-                </div>
-                <div class="titulo">
-                  <h3>El alojamiento</h3>
-                  <h4>Dormitorios:</h4>
+          <div class="col-12 col-md-6 col-lg-9">
+
+            <div class="row">
+              <div class="col-6 col-md-4 col-lg-2">
+                <div class="masInformacionSection--copy pb-5">
+                  <div class="masInformacionSection--copy-title d-block">
+                    <div class="ico text-center mx-auto">
+                      <img src={villaIco1.src} alt="" />
+                    </div>
+                    <div class="titulo text-center">
+
+                      <h4>4 Dormitorios</h4>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <div class="masInformacionSection--copy-desc">
-                <p><strong>4</strong> Amplios dormitorios:</p>
-                <p><strong>3</strong> Dormitorios con camas tamaño King + camas individuales extraíbles.</p>
-                <p><strong>1</strong>  dormitorio con <strong>2</strong> camas tamaño queen.</p>
-                <p><strong>4</strong> baños completos.</p>
-                <p>Cocina Equipada</p>
-                <p>Comedor</p>
-                <p>Sala integrada</p>
-                <p>Terraza Equipada</p>
-                <p>WiFi</p>
+              <div class="col-6 col-md-4 col-lg-2">
+                <div class="masInformacionSection--copy pb-5">
+                  <div class="masInformacionSection--copy-title d-block">
+                    <div class="ico text-center mx-auto">
+                      <img src={villabanera.src} alt="" />
+                    </div>
+                    <div class="titulo text-center">
+
+                      <h4>4 baños completos</h4>
+                    </div>
+                  </div>
+                </div>
               </div>
-            </div>            
+              <div class="col-6 col-md-4 col-lg-2">
+                <div class="masInformacionSection--copy pb-5">
+                  <div class="masInformacionSection--copy-title d-block">
+                    <div class="ico text-center mx-auto">
+                      <img src={villacocina.src} alt="" />
+                    </div>
+                    <div class="titulo text-center">
+
+                      <h4>Cocina equipada</h4>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6 col-md-4 col-lg-2">
+                <div class="masInformacionSection--copy pb-5">
+                  <div class="masInformacionSection--copy-title d-block">
+                    <div class="ico text-center mx-auto">
+                      <img src={villacomedor.src} alt="" />
+                    </div>
+                    <div class="titulo text-center">
+                      <h4>Comedor</h4>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6 col-md-4 col-lg-2">
+                <div class="masInformacionSection--copy pb-5">
+                  <div class="masInformacionSection--copy-title d-block">
+                    <div class="ico text-center mx-auto">
+                      <img src={villasala.src} alt="" />
+                    </div>
+                    <div class="titulo text-center">
+                      <h4>Sala integrada</h4>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6 col-md-4 col-lg-2">
+                <div class="masInformacionSection--copy pb-5">
+                  <div class="masInformacionSection--copy-title d-block">
+                    <div class="ico text-center mx-auto">
+                      <img src={villabalcon.src} alt="" />
+                    </div>
+                    <div class="titulo text-center">
+                      <h4>Terraza Equipada</h4>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
           </div>
-          <div class="col-12 col-md-6 col-lg-6">
+          <div class="col-12 col-md-6 col-lg-3">
             <div class="imageBlock--btns py-5">
               <div class="text-end d-flex justify-content-end gap-2 pb-5">
                 <a href="#!" class="btn btn-circle btn-airbnb rounded-circle d-flex align-items-center justify-content-center text-align-center">

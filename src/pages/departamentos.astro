@@ -10,6 +10,7 @@ import IconBooking from '../assets/ico-booking.png'
 import HeroDeptos from '../assets/hero-departamentos.jpg';
 import GalleryDepartamentos from '../components/GalleryDepartamentos.astro';
 import GalleryDepartamentos2 from '../components/GalleryDepartamentos2.astro';
+import GalleryDepartamentos3 from '../components/GalleryDepartamentos3.astro';
 
 import villaIco1 from '../assets/villa-ico-1-black.png';
 import villabanera from '../assets/banera.png';
@@ -136,6 +137,23 @@ const galleryImagesDpto2 = [
     height: 800
   },
 ];
+const galleryImagesDpto3 = [
+  {
+    src: '/habitacion-sencilla-1.jpg', // Archivo en public/
+    alt: 'Villa 3 - 1',
+    title: 'Villa 3',
+    width: 1200,
+    height: 800
+  },  
+  {
+    src: '/habitacion-sencilla-2.jpg', // Archivo en public/
+    alt: 'Villa 3 - 1',
+    title: 'Villa 3',
+    width: 1200,
+    height: 800
+  },
+  
+];
 ---
 <style>
   .masInformacionSection--copy{
@@ -167,7 +185,7 @@ const galleryImagesDpto2 = [
     <div class="container pt-4 pb-3">
       <div class="welcomeBlock--copy-large mw-100">
         <h2 class="text-center">
-          DEPARTAMENTO 1  RECÁMARA
+          SUITE 1 RECÁMARA 
         </h2>
         <p class="text-center mw-100 w-100">
           Un espacio moderno y acogedor, ideal para parejas o viajes de negocios. Este departamento ofrece una recámara amplia, zona de descanso y convivencia, y acabados que invitan a relajarte desde el primer momento. Además, al salir de tu puerta tendrás acceso directo a las amenidades del edificio, disfrutando de una experiencia completa de descanso, comodidad y entretenimiento.
@@ -262,7 +280,7 @@ const galleryImagesDpto2 = [
                       <img src={villabalcon.src} alt="" />
                     </div>
                     <div class="titulo text-center">
-                      <h4>Terraza Equipada</h4>
+                      <h4>Balcón con vista al jardín</h4>
                     </div>
                   </div>
                 </div>
@@ -295,7 +313,7 @@ const galleryImagesDpto2 = [
     <div class="container pt-4 pb-3">
       <div class="welcomeBlock--copy-large mw-100">
         <h2 class="text-center">
-          DEPARTAMENTO 2 RECÁMARAS
+          MASTER SUITE 2 RECÁMARAS
         </h2>
         <p class="text-center mw-100 w-100">
           Pensado para familias o grupos que buscan más espacio sin perder el toque de modernidad. Este departamento ofrece dos recámaras amplias, zona de descanso y convivencia, y acabados que invitan a relajarte desde el primer momento. Lo mejor: al salir de tu puerta estarás conectado de inmediato con las amenidades del edificio, facilitando tu experiencia de descanso y entretenimiento.
@@ -389,7 +407,7 @@ const galleryImagesDpto2 = [
                       <img src={villabalcon.src} alt="" />
                     </div>
                     <div class="titulo text-center">
-                      <h4>Terraza Equipada</h4>
+                      <h4>Balcón con vista al jardín</h4>
                     </div>
                   </div>
                 </div>
@@ -418,6 +436,137 @@ const galleryImagesDpto2 = [
     
     
   </div>
+
+  <!-- Habitacion sencilla -->
+  <div class="welcomeBlock pt-5 pb-5">
+    <div class="container pt-4 pb-3">
+      <div class="welcomeBlock--copy-large mw-100">
+        <h2 class="text-center">
+          HABITACIÓN SENCILLA 1 RECÁMARA
+        </h2>
+        <p class="text-center mw-100 w-100">
+          Un espacio moderno y funcional, ideal para personas que viajan solas o por negocios. Este departamento cuenta con una recámara cómoda, un baño completo y un ambiente diseñado para el descanso y la productividad. Sus acabados crean una atmósfera acogedora desde el primer momento.
+        </p>
+      </div>
+    </div>
+  </div>  
+  <div class="imageBlock">
+    
+    <GalleryDepartamentos3
+      images={galleryImagesDpto3}
+      imagesThumbs={galleryImagesDpto3}
+    />
+
+
+    <!-- Mas informacion -->
+    <section class="masInformacionSection">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-12 col-md-6 col-lg-9">
+
+            <div class="row">
+              <div class="col-6 col-md-4 col-lg-2">
+                <div class="masInformacionSection--copy pb-5">
+                  <div class="masInformacionSection--copy-title d-block">
+                    <div class="ico text-center mx-auto">
+                      <img src={villaIco1.src} alt="" />
+                    </div>
+                    <div class="titulo text-center">
+
+                      <h4>1 Dormitorio</h4>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6 col-md-4 col-lg-2">
+                <div class="masInformacionSection--copy pb-5">
+                  <div class="masInformacionSection--copy-title d-block">
+                    <div class="ico text-center mx-auto">
+                      <img src={villabanera.src} alt="" />
+                    </div>
+                    <div class="titulo text-center">
+
+                      <h4>1 baño completo</h4>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6 col-md-4 col-lg-2">
+                <div class="masInformacionSection--copy pb-5">
+                  <div class="masInformacionSection--copy-title d-block">
+                    <div class="ico text-center mx-auto">
+                      <img src={villacocina.src} alt="" />
+                    </div>
+                    <div class="titulo text-center">
+
+                      <h4>Cocina equipada</h4>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6 col-md-4 col-lg-2">
+                <div class="masInformacionSection--copy pb-5">
+                  <div class="masInformacionSection--copy-title d-block">
+                    <div class="ico text-center mx-auto">
+                      <img src={villacomedor.src} alt="" />
+                    </div>
+                    <div class="titulo text-center">
+                      <h4>Comedor</h4>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6 col-md-4 col-lg-2">
+                <div class="masInformacionSection--copy pb-5">
+                  <div class="masInformacionSection--copy-title d-block">
+                    <div class="ico text-center mx-auto">
+                      <img src={villasala.src} alt="" />
+                    </div>
+                    <div class="titulo text-center">
+                      <h4>Sala integrada</h4>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6 col-md-4 col-lg-2">
+                <div class="masInformacionSection--copy pb-5">
+                  <div class="masInformacionSection--copy-title d-block">
+                    <div class="ico text-center mx-auto">
+                      <img src={villabalcon.src} alt="" />
+                    </div>
+                    <div class="titulo text-center">
+                      <h4>Balcón con vista al jardín</h4>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="imageBlock--btns py-5">
+              <div class="text-end d-flex justify-content-end gap-2 pb-5">
+                <a href="#!" class="btn btn-circle btn-airbnb rounded-circle d-flex align-items-center justify-content-center text-align-center">
+                  <img src={IconAirbnb.src} alt="Airbnb" class="d-block w-100">
+                </a>
+                <a href="#!" class="btn btn-circle btn-booking rounded-circle d-flex align-items-center justify-content-center text-align-center">
+                  <img src={IconBooking.src} alt="Booking" class="d-block w-100">
+                </a>
+                <a href="#!" class="btn btn-warning rounded-pill text-white px-4 py-2 d-flex align-items-center">RESERVA AQUÍ</a>        
+              </div>
+            </div>            
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <!-- Mas informacion -->
+    
+    
+  </div>   
+  <!-- Habitacion sencilla -->
+
   
   
 </Layout>

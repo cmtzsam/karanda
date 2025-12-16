@@ -1,0 +1,204 @@
+---
+// Props del componente (sin Image de Astro para imágenes públicas)
+export interface Props {
+  images: Array<{
+    src: string;
+    alt: string;
+    title?: string;
+    width?: number;
+    height?: number;
+  }>;
+  imagesThumbs: Array<{
+    src: string;
+    alt: string;
+    title?: string;
+  }>;
+  slidesPerView?: number;
+  spaceBetween?: number;
+  loop?: boolean;
+  
+}
+
+const { 
+  images = [],
+  slidesPerView = 1,
+  spaceBetween = 20,
+  loop = true ,
+  imagesThumbs 
+} = Astro.props;
+
+  /* Importar estilos base de Swiper */
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+  
+  /* Importar estilos de PhotoSwipe */
+import 'photoswipe/style.css';
+---
+
+<style>
+  .swiper-pagination{
+    display: none;
+  }
+  .arrowGallery{
+    display: none;
+  }  
+  .imagecrop{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-height: 800px;
+    overflow: hidden;
+  }
+</style>
+<!-- Estructura HTML simplificada -->
+<div class="gallery-container">
+  <div class="swiper" id="gallery-swiper3">
+    <div class="swiper-wrapper">
+      {images.map((image, index) => (
+        <div class="swiper-slide">
+          <div class="image-container" data-pswp-src={image.src} data-pswp-width={image.width || 1200} data-pswp-height={image.height || 800}>
+            <div class="imagecrop">
+              <img 
+                src={image.src}
+                alt={image.alt}
+                loading="lazy"
+                class="gallery-image img-fluid w-100"
+              />            
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+    
+    <!-- Navegación -->
+    <div class="swiper-button-next arrowGallery "></div>
+    <div class="swiper-button-prev arrowGallery "></div>
+    
+    <!-- Paginación -->
+    <div class="swiper-pagination"></div>
+  </div>
+  <div class="swiper thumbsSlider" id="gallery-swiper3-thumb">
+    <div class="swiper-wrapper">
+      {imagesThumbs.map((image, index) => (
+        <div class="swiper-slide">
+          <img 
+            src={image.src}
+            alt={image.alt}
+            loading="lazy"
+            class="img-fluid"
+          />
+        </div>
+      ))}
+    </div>
+  </div>
+</div>
+
+<script>
+  import Swiper from 'swiper';
+  import { Navigation, Pagination, Autoplay, Thumbs } from 'swiper/modules';
+
+  document.addEventListener('DOMContentLoaded', () => {
+    // Inicializar Swiper
+    const swiperThumb2 = new Swiper("#gallery-swiper3-thumb", {
+      loop: true,
+      freeMode: true,
+      watchSlidesProgress: true,
+      slidesPerView: 3,
+      breakpoints: {
+        480: {
+          slidesPerView: 3,
+          spaceBetween: 5,
+        },
+        1180: {
+          slidesPerView: 4,
+        },
+      },  
+      spaceBetween: 15,    
+    });
+    const swiper2 = new Swiper('#gallery-swiper3', {
+      modules: [Navigation, Pagination, Autoplay, Thumbs],
+      loop: true,
+      slidesPerView: 1,
+      spaceBetween: 20,
+      // autoplay: {
+      //   delay: 5000,
+      //   disableOnInteraction: false,
+      // },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      thumbs: {
+        swiper: swiperThumb2
+      }
+    });
+
+
+    // Manejar clicks en las imágenes manualmente
+    document.addEventListener('click', (e) => {
+      const clickedContainer2 = e.target.closest('.image-container');
+      
+      if (clickedContainer2) {
+        e.preventDefault();
+        e.stopPropagation();
+        
+        // Pausar autoplay
+        swiper2.autoplay?.stop();
+        
+        // Obtener todas las imágenes
+        const allContainers = document.querySelectorAll('.image-container');
+        const clickedIndex = Array.from(allContainers).indexOf(clickedContainer2);
+        
+        // Crear datos para PhotoSwipe
+        const items2 = Array.from(allContainers).map((container) => ({
+          src: container.dataset.pswpSrc,
+          width: parseInt(container.dataset.pswpWidth) || 1200,
+          height: parseInt(container.dataset.pswpHeight) || 800,
+          alt: container.querySelector('.gallery-image')?.alt || ''
+        }));
+        
+        // Importar y abrir PhotoSwipe
+        import('photoswipe').then((PhotoSwipeModule) => {
+          const PhotoSwipe = PhotoSwipeModule.default;
+          
+          const pswp2 = new PhotoSwipe({
+            dataSource: items2,
+            index: clickedIndex,
+            
+            // Configuración
+            bgOpacity: 1,
+            showHideAnimationType: 'zoom',
+            initialZoomLevel: 'fit',
+            secondaryZoomLevel: 2,
+            maxZoomLevel: 3,
+            wheelToZoom: true,
+            pinchToClose: false,
+            
+            // Configuración de UI
+            closeTitle: 'Cerrar (Esc)',
+            zoomTitle: 'Zoom',
+            arrowPrevTitle: 'Anterior',
+            arrowNextTitle: 'Siguiente',
+          });
+          
+          // Event listener para reanudar autoplay
+          pswp2.on('close', () => {
+            swiper2.autoplay?.start();
+          });
+          
+          // Inicializar PhotoSwipe
+          pswp2.init();
+          
+        }).catch(error => {
+          console.error('Error loading PhotoSwipe:', error);
+        });
+      }
+    });
+  });
+</script>

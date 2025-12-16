@@ -200,11 +200,41 @@ const homeImage = [
         <div class="col-6 col-md-4 col-lg-4">
           <div class="masInformacionSection--copy pb-5">
             <div class="masInformacionSection--copy-title d-block text-center">
-              <div class="ico d-block text-center mx-auto">
+              <a
+                data-bs-toggle="collapse" 
+                href="#collapseExample" 
+                role="button" 
+                aria-expanded="false" 
+                aria-controls="collapseExample"                
+                class="ico d-block text-center mx-auto"
+              >
                 <img src={villaIco2.src} alt="" class="d-block mx-auto" />
-              </div>
+              </a>
               <br>
-              <h5 class="text-white">SERVICIOS PRIVADOS</h5>
+              <h5 
+                class="text-white"  
+              >
+              <a 
+                data-bs-toggle="collapse" 
+                href="#collapseExample" 
+                role="button" 
+                aria-expanded="false" 
+                aria-controls="collapseExample" 
+                class="text-white">
+                SERVICIOS PRIVADOS
+                <br>
+                <small>Ver más +</small>
+              </a>
+              </h5>
+              <div class="collapse" id="collapseExample">
+                <p class="pt-3">
+                  Servicio de Chef
+                </p>
+                <p>
+                  Servicio de Transporte
+                </p>
+                <p>Servicio de Mixología</p>
+              </div>
             </div>
           </div>              
         </div>
@@ -212,11 +242,13 @@ const homeImage = [
         <div class="col-6 col-md-4 col-lg-4">
           <div class="masInformacionSection--copy pb-5">
             <div class="masInformacionSection--copy-title d-block text-center">
-              <div class="ico d-block text-center mx-auto">
+              <a href="/resenas" class="ico d-block text-center mx-auto">
                 <img src={villaIco4.src} alt="" class="d-block mx-auto" />
-              </div>
+              </a>
               <br>
-              <h5 class="text-white">EXPERIENCIA DEL HÚESPED</h5>
+              <h5 class="text-white">
+                <a href="/resenas" class="text-white">EXPERIENCIA DEL HÚESPED</a>
+              </h5>
             </div>
           </div>              
         </div>
@@ -224,11 +256,13 @@ const homeImage = [
         <div class="col-6 col-md-4 col-lg-4">
           <div class="masInformacionSection--copy pb-5">
             <div class="masInformacionSection--copy-title d-block text-center">
-              <div class="ico d-block text-center mx-auto">
+              <a href="/amenidades" class="ico d-block text-center mx-auto">
                 <img src={villaIco3.src} alt="" class="d-block mx-auto" />
-              </div>
+              </a>
               <br>
-              <h5 class="text-white">AMENIDADES</h5>
+              <h5 class="text-white">
+                <a href="/amenidades" class="text-white">AMENIDADES</a>
+              </h5>
             </div>
           </div>              
         </div>

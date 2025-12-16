@@ -20,6 +20,8 @@ import villacocina from '../assets/cocina.png';
 import villacomedor from '../assets/comedor.png';
 import villasala from '../assets/sala.png';
 import villabalcon from '../assets/balcon.png';
+import villaalberca from '../assets/icono-alberca.png';
+import villapersonas from '../assets/icono-personas.png';
 
 const galleryImages = [
   {
@@ -252,10 +254,22 @@ const galleryImagesDpto2 = [
       <div class="container">
 
         <div class="row">
-          <div class="col-12 col-md-6 col-lg-9">
+          <div class="col-12 col-md-6 col-lg-10">
 
             <div class="row">
-              <div class="col-6 col-md-4 col-lg-2">
+              <div class="col">
+                <div class="masInformacionSection--copy pb-5">
+                  <div class="masInformacionSection--copy-title d-block">
+                    <div class="ico text-center mx-auto">
+                      <img src={villapersonas.src} alt="" />
+                    </div>
+                    <div class="titulo text-center">
+                      <h4>16 personas</h4>
+                    </div>
+                  </div>
+                </div>
+              </div>              
+              <div class="col">
                 <div class="masInformacionSection--copy pb-5">
                   <div class="masInformacionSection--copy-title d-block">
                     <div class="ico text-center mx-auto">
@@ -263,12 +277,12 @@ const galleryImagesDpto2 = [
                     </div>
                     <div class="titulo text-center">
 
-                      <h4>4 Dormitorios</h4>
+                      <h4>4 Dormitorios <br> 8 camas</h4>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="col-6 col-md-4 col-lg-2">
+              <div class="col">
                 <div class="masInformacionSection--copy pb-5">
                   <div class="masInformacionSection--copy-title d-block">
                     <div class="ico text-center mx-auto">
@@ -281,7 +295,7 @@ const galleryImagesDpto2 = [
                   </div>
                 </div>
               </div>
-              <div class="col-6 col-md-4 col-lg-2">
+              <div class="col">
                 <div class="masInformacionSection--copy pb-5">
                   <div class="masInformacionSection--copy-title d-block">
                     <div class="ico text-center mx-auto">
@@ -294,7 +308,7 @@ const galleryImagesDpto2 = [
                   </div>
                 </div>
               </div>
-              <div class="col-6 col-md-4 col-lg-2">
+              <div class="col">
                 <div class="masInformacionSection--copy pb-5">
                   <div class="masInformacionSection--copy-title d-block">
                     <div class="ico text-center mx-auto">
@@ -306,7 +320,7 @@ const galleryImagesDpto2 = [
                   </div>
                 </div>
               </div>
-              <div class="col-6 col-md-4 col-lg-2">
+              <div class="col">
                 <div class="masInformacionSection--copy pb-5">
                   <div class="masInformacionSection--copy-title d-block">
                     <div class="ico text-center mx-auto">
@@ -318,32 +332,45 @@ const galleryImagesDpto2 = [
                   </div>
                 </div>
               </div>
-              <div class="col-6 col-md-4 col-lg-2">
+              <div class="col">
                 <div class="masInformacionSection--copy pb-5">
                   <div class="masInformacionSection--copy-title d-block">
                     <div class="ico text-center mx-auto">
                       <img src={villabalcon.src} alt="" />
                     </div>
                     <div class="titulo text-center">
-                      <h4>Terraza Equipada</h4>
+                      <h4>Terraza con grill</h4>
                     </div>
                   </div>
                 </div>
               </div>
+              <div class="col">
+                <div class="masInformacionSection--copy pb-5">
+                  <div class="masInformacionSection--copy-title d-block">
+                    <div class="ico text-center mx-auto">
+                      <img src={villaalberca.src} alt="" />
+                    </div>
+                    <div class="titulo text-center">
+                      <h4>2 albercas privadas</h4>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
             </div>
 
           </div>
-          <div class="col-12 col-md-6 col-lg-3">
+          <div class="col-12 col-md-6 col-lg-2">
             <div class="imageBlock--btns py-5">
-              <div class="text-end d-flex justify-content-end gap-2 pb-5">
+              <div class="d-flex justify-content-start gap-2 pb-3">
                 <a href="#!" class="btn btn-circle btn-airbnb rounded-circle d-flex align-items-center justify-content-center text-align-center">
                   <img src={IconAirbnb.src} alt="Airbnb" class="d-block w-100">
                 </a>
                 <a href="#!" class="btn btn-circle btn-booking rounded-circle d-flex align-items-center justify-content-center text-align-center">
                   <img src={IconBooking.src} alt="Booking" class="d-block w-100">
                 </a>
-                <a href="#!" class="btn btn-warning rounded-pill text-white px-4 py-2 d-flex align-items-center">RESERVA AQUÍ</a>        
               </div>
+              <a href="#!" class="btn btn-warning rounded-pill text-white px-4 py-2 d-flex align-items-center text-center justify-content-center">RESERVA AQUÍ</a>        
             </div>            
           </div>
         </div>
